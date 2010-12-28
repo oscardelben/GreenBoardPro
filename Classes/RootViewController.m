@@ -88,23 +88,11 @@
 
 
 - (void)configureCell:(CustomCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-	switch (indexPath.section) {
-		case 0:
-			cell.name.text = @"foo";
-			break;
-		case 1: {
-			NSManagedObject *managedObject = [[self.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
-			cell.name.text = [managedObject valueForKey:@"name"];
-			cell.name.delegate = self;
-			break;
-		}
-	}
-	
-//    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//
-//	cell.name.text = [managedObject valueForKey:@"name"];
-//	cell.name.delegate = self;
+    
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
+	cell.name.text = [managedObject valueForKey:@"name"];
+	cell.name.delegate = self;
 }
 
 
@@ -175,20 +163,13 @@
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // return [[self.fetchedResultsController sections] count];
-	return 2;
+    return [[self.fetchedResultsController sections] count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    // return [sectionInfo numberOfObjects];
-	switch (section) {
-		case 0:
-			return 1;
-		case 1:
-			return [[self.fetchedResultsController fetchedObjects] count];
-	}
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
 
 
@@ -299,7 +280,7 @@
     if (fetchedResultsController_ != nil) {
         return fetchedResultsController_;
     }
-	
+    
     /*
      Set up the fetched results controller.
     */

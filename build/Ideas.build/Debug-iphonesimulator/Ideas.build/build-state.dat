@@ -1,7 +1,7 @@
 TIdeas
 v7
 r0
-t315261673.554342
+t315270757.522164
 cCheck dependencies
 cProcessInfoPlistFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Info.plist Ideas-Info.plist
 cCompileXIB /Users/oscardelben/projects/cocoa/apps/Ideas/MainWindow.xib
@@ -108,9 +108,9 @@ i<UIKit/UIKit.h>
 i<CoreData/CoreData.h>
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m
-c000000004D1A4B670000000000003C1C
-t1293568871
-s15388
+c000000004D1A6EDC0000000000003A57
+t1293577948
+s14935
 i"RootViewController.h"
 i"CustomCell.h"
 
@@ -144,11 +144,11 @@ t1293444986
 s18844
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
-t1293568871
+t1293577957
 s306
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM
-t1293568871
+t1293577957
 s102
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/CustomCell.nib
@@ -156,7 +156,7 @@ t1293479505
 s1688
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
-t1293568871
+t1293577957
 s38092
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas.momd
@@ -197,8 +197,8 @@ t1293471858
 s68892
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o
-t1293568871
-s80320
+t1293577957
+s80232
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/main.o
 t1293440985
@@ -221,7 +221,7 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies315261673#315261673#0(0"0(0#1#0"8630259488#0"0#
+lSLF07#2@18"Check dependencies315270757#315270757#0(0"0(0#1#0"8629710144#0"0#
 
 CCompileC build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/CustomCell.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/CustomCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s315140206.539975
@@ -265,8 +265,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@79"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m315164658#315164658#0(0"0(0#0#71"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m8612408288#1972"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources/i386 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-bwjbeklfosmfcmdogpxihsvmtmuo/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/IdeasAppDelegate.o0#
 
 CCompileC build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s315261671.131414
-e315261671.431750
+s315270757.074674
+e315270757.302435
 r1
 xCompileC
 xbuild/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o
@@ -275,9 +275,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m: In function '-[RootViewController tableView:numberOfRowsInSection:]':
-o/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m:192: warning: control reaches end of non-void function
-lSLF07#2@81"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m315261671#315261671#0(274"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m: In function '-[RootViewController tableView:numberOfRowsInSection:]':/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m:192: warning: control reaches end of non-void function1(22@40"Control reaches end of non-void function315261671#145#129#0(6@73"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m315261671#192#0#192#0#40"control reaches end of non-void function0(0#0#73"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m8629121824#1976"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources/i386 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-bwjbeklfosmfcmdogpxihsvmtmuo/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o0#
+lSLF07#2@81"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m315270757#315270757#0(0"0(0#0#73"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m8617326880#1976"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources/i386 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-bwjbeklfosmfcmdogpxihsvmtmuo/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/main.o /Users/oscardelben/projects/cocoa/apps/Ideas/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s315133785.431352
@@ -326,23 +324,23 @@ x/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld
 lSLF07#2@91"DataModelVersionCompile build/Debug-iphonesimulator/Ideas.app/Ideas.momd Ideas.xcdatamodeld315166058#315166058#0(0"0(0#0#63"/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld8617779872#398"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas.momd0#
 
 CGenerateDSYMFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
-s315261671.459907
-e315261671.479662
+s315270757.495009
+e315270757.518224
 r1
 xGenerateDSYMFile
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
-lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/Ideas.app.dSYM build/Debug-iphonesimulator/Ideas.app/Ideas315261671#315261671#0(0"0(0#0#88"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas8632067552#395"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM0#
+lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/Ideas.app.dSYM build/Debug-iphonesimulator/Ideas.app/Ideas315270757#315270757#0(0"0(0#0#88"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas8629943744#395"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM0#
 
 CLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas normal i386
-s315261671.431844
-e315261671.459808
+s315270757.302530
+e315270757.494908
 r1
 xLd
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
 xnormal
 xi386
-lSLF07#2@93"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas315261671#315261671#0(0"0(0#0#0"8634162848#940"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/Ideas.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas0#
+lSLF07#2@93"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas315270757#315270757#0(0"0(0#0#0"8632204800#940"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/Ideas.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas0#
 
 CProcessInfoPlistFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Info.plist Ideas-Info.plist
 s315133782.910921
@@ -367,10 +365,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@27"Precompile Ideas_Prefix.pch315133783#315133785#0(0"0(0#0#61"/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas_Prefix.pch8615539584#1828"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources/i386 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/DerivedSources -c /Users/oscardelben/projects/cocoa/apps/Ideas/Ideas_Prefix.pch -o /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-bwjbeklfosmfcmdogpxihsvmtmuo/Ideas_Prefix.pch.gch0#
 
 CTouch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
-s315261671.479751
-e315261671.482267
+s315270757.518325
+e315270757.522116
 r1
 xTouch
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
-lSLF07#2@88"Touch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app315261671#315261671#0(0"0(0#0#0"8631453440#288"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app0#
+lSLF07#2@88"Touch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app315270757#315270757#0(0"0(0#0#0"8629255680#288"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app0#
 
