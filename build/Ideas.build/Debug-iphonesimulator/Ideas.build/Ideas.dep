@@ -1,7 +1,7 @@
-17c77fdf447a44ad26ad4bf4eba304d2 234d3c3403e96e197c7149cefe62fe83 ffffffffffffffffffffffffffffffff 306 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
+17c77fdf447acc6726ad4bf4eba305d2 234d3c3403e96e197c7149cefe62fe83 ffffffffffffffffffffffffffffffff 306 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
 00000000000000000000000000000000 61075ae707f1cd6f5b636a07b172a56b ffffffffffffffffffffffffffffffff 102 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM
-40adad4864cdfb56665c52f91a6ec99b d12955831bc2d39c028307373bdeacca ffffffffffffffffffffffffffffffff 38092 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
-353aed34335dbe94aaedf8742829e067 8f05f22e2244857f3274ea5f1a059232 ffffffffffffffffffffffffffffffff 80232 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o
+40adad4864cd739c665c52f91a6ec89b d12955831bc2d39c028307373bdeacca ffffffffffffffffffffffffffffffff 38244 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
+353aed34335d365eaaedf8742829e167 8f05f22e2244857f3274ea5f1a059232 ffffffffffffffffffffffffffffffff 81712 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o
 353aed347e4778e3aaedf8742829d4f6 a11cc2bbe325d655bd2ca085fc8550dc ffffffffffffffffffffffffffffffff 39308 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/CustomCell.o
 353aed347f9e9f30aaedf8742829c349 a577eb5a91176f02728f63896e27932b ffffffffffffffffffffffffffffffff 68892 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/IdeasAppDelegate.o
 353aed34335f2e14aaedf8742829d679 cbc3768779a192b09b8b7baa92a0657f ffffffffffffffffffffffffffffffff 6316 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/main.o

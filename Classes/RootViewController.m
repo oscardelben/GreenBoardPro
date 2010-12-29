@@ -42,18 +42,23 @@
 		self.navigationItem.title = [NSString stringWithFormat:@"Ideas (%d)", [[self.fetchedResultsController fetchedObjects] count]];
 	}
 
-
-	// header
+	// Configure header
 	
-	UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 28)] autorelease];
-	label.backgroundColor = [UIColor clearColor];
-	label.font = [UIFont boldSystemFontOfSize:15];
-	label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.8];
-	label.textAlignment = UITextAlignmentLeft;
-	label.textColor = [UIColor whiteColor];
-	label.text = @"Header Text"; 
-	self.tableView.tableHeaderView = label;
+	if (currentObject) {
+		NSString *text = [currentObject valueForKey:@"name"];
+		
+		CGSize withinSize = CGSizeMake(300, 2000); // max size allowed
+		CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:withinSize lineBreakMode:UILineBreakModeWordWrap];
+		
+		UIView *containerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, size.height + 20)] autorelease];
+		UITextView *textArea = [[[UITextView alloc] initWithFrame:CGRectMake(10, 20, 300, size.height)] autorelease];
+		textArea.backgroundColor = [UIColor whiteColor];
+		textArea.text = text;
+		[containerView addSubview:textArea];
+		self.tableView.tableHeaderView = containerView;
+	}
 }
+
 
 
 // Implement viewWillAppear: to do additional setup before the view is presented.
