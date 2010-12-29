@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "CustomCell.h"
+#import "UIButton+Glossy.h"
 
 
 @interface RootViewController ()
@@ -19,7 +20,7 @@
 
 @synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_;
 
-@synthesize currentObject;
+@synthesize currentObject, isEnteringText;
 
 
 #pragma mark -
@@ -28,9 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Set up the edit and add buttons.
-    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
@@ -41,10 +39,10 @@
 	} else {
 		self.navigationItem.title = [NSString stringWithFormat:@"Ideas (%d)", [[self.fetchedResultsController fetchedObjects] count]];
 	}
-
-	// Configure header
 	
 	if (currentObject) {
+		// Configure header
+		
 		NSString *text = [currentObject valueForKey:@"name"];
 		
 		CGSize withinSize = CGSizeMake(300, 2000); // max size allowed
@@ -56,6 +54,31 @@
 		textArea.text = text;
 		[containerView addSubview:textArea];
 		self.tableView.tableHeaderView = containerView;
+		
+		
+		// Configure footer
+		// http://www.mlsite.net/blog/?p=232
+		
+		UIView *footerContainerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 54)] autorelease];
+		UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		// button.frame = CGRectMake(0, 0, 310, 54);
+		button.frame = CGRectMake(10, 10, 300, 34);
+		
+		UIColor *redColor = [UIColor colorWithRed:.65 green:.05 blue:.05 alpha:1];
+		
+		[button setBackgroundToGlossyRectOfColor:redColor withBorder:YES forState:UIControlStateNormal];
+		
+		[button setTitle:@"Delete" forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[button setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
+		[button.titleLabel setShadowOffset:CGSizeMake(0, -1)];
+		[button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+		
+		[button addTarget:self action:@selector(showDeleteConfirmation:) forControlEvents:UIControlEventTouchUpInside];
+		
+		[footerContainerView addSubview:button];
+		
+		self.tableView.tableFooterView = footerContainerView;
 	}
 }
 
@@ -100,6 +123,30 @@
 	cell.name.delegate = self;
 }
 
+- (void)showDeleteConfirmation:(id)sender
+{
+	UIActionSheet *actionSheet = [[UIActionSheet alloc]
+								  initWithTitle:@"Deleting this entry will also delete all of its children" 
+								  delegate:self 
+								  cancelButtonTitle:@"Cancel" 
+								  destructiveButtonTitle:@"Confirm" 
+								  otherButtonTitles:nil];
+	
+	[actionSheet showInView:self.view];
+	
+	[actionSheet release];
+}
+
+#pragma mark -
+#pragma mark UIActionSheetDelegate methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0) {
+		[self deleteCurrentObject];
+	}
+}
+
 
 #pragma mark -
 #pragma mark Add a new object
@@ -121,16 +168,14 @@
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate.
-		 You should not use this function in a shipping application, although it may be useful during development.
-		 If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application
-		 by pressing the Home button.
-         */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+														message:@"We experienced an error. Please quit the application by pressing the Home button." 
+													   delegate:self cancelButtonTitle:nil 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
     }
 	
 }
@@ -144,10 +189,37 @@
 	NSError *error = nil;
 	if (![context save:&error]) {
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+														message:@"We experienced an error. Please quit the application by pressing the Home button." 
+													   delegate:self cancelButtonTitle:nil 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
 	}
 }
 
+- (void)deleteCurrentObject
+{
+	
+	NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+	
+	[context deleteObject:currentObject];
+	
+	NSError *error = nil;
+	if (![context save:&error]) {
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+														message:@"We experienced an error. Please quit the application by pressing the Home button." 
+													   delegate:self cancelButtonTitle:nil 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	}
+	
+	[self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 
@@ -226,13 +298,14 @@
         // Save the context.
         NSError *error = nil;
         if (![context save:&error]) {
-            /*
-             Replace this implementation with code to handle the error appropriately.
-             
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-             */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+															message:@"We experienced an error. Please quit the application by pressing the Home button." 
+														   delegate:self cancelButtonTitle:nil 
+												  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
         }
     }   
 }
@@ -249,6 +322,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
+	if (isEnteringText) {
+		return;
+	}
+	
 	RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
 	rootViewController.managedObjectContext = self.managedObjectContext;
 	
@@ -263,9 +340,21 @@
 #pragma mark -
 #pragma mark UITextField delegate methods
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+	isEnteringText = YES;
+	
+	self.navigationItem.rightBarButtonItem.enabled = FALSE;
+	return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 	[textField endEditing:YES];
+	
+	isEnteringText = FALSE;
+	
+	self.navigationItem.rightBarButtonItem.enabled = TRUE;
 	
 	CustomCell *cell = (CustomCell *)textField.superview.superview;
 
@@ -336,13 +425,14 @@
     
     NSError *error = nil;
     if (![fetchedResultsController_ performFetch:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+														message:@"We experienced an error. Please quit the application by pressing the Home button." 
+													   delegate:self cancelButtonTitle:nil 
+											  otherButtonTitles:nil];
+		[alert show];
+		[alert release];
     }
     
     return fetchedResultsController_;

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate> {
+@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate> {
 	
 	NSManagedObject *currentObject;
+	
+	BOOL isEnteringText;
 
 @private
     NSFetchedResultsController *fetchedResultsController_;
@@ -22,5 +24,10 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, retain) NSManagedObject *currentObject;
+@property (nonatomic, assign) BOOL isEnteringText;
+
+
+- (void)showDeleteConfirmation:(id)sender;
+- (void)deleteCurrentObject;
 
 @end

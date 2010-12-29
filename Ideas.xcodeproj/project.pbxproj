@@ -19,6 +19,7 @@
 		28D3F202112F7DC200FD0661 /* Ideas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Ideas.xcdatamodeld */; };
 		BF55E01312C8A51F00689625 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF55E01212C8A51F00689625 /* CustomCell.m */; };
 		BF55E01512C8A5AB00689625 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF55E01412C8A5AB00689625 /* CustomCell.xib */; };
+		BFA0DC3812CB200700C07211 /* UIButton+Glossy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		BF55E01112C8A51F00689625 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		BF55E01212C8A51F00689625 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		BF55E01412C8A5AB00689625 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		BFA0DC3612CB200700C07211 /* UIButton+Glossy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Glossy.h"; sourceTree = "<group>"; };
+		BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Glossy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				1D3623250D0F684500981E51 /* IdeasAppDelegate.m */,
 				BF55E01112C8A51F00689625 /* CustomCell.h */,
 				BF55E01212C8A51F00689625 /* CustomCell.m */,
+				BFA0DC3612CB200700C07211 /* UIButton+Glossy.h */,
+				BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				28D3F202112F7DC200FD0661 /* Ideas.xcdatamodeld in Sources */,
 				BF55E01312C8A51F00689625 /* CustomCell.m in Sources */,
+				BFA0DC3812CB200700C07211 /* UIButton+Glossy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
