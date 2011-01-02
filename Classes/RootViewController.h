@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "IdeaDetailViewController.h"
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate> {
+@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, IdeaDetailDelegate> {
 	
-	NSManagedObject *currentObject;
-	
-	BOOL isEnteringText;
+	NSManagedObject *selectedIdea;
 
 @private
     NSFetchedResultsController *fetchedResultsController_;
@@ -23,11 +22,11 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, retain) NSManagedObject *currentObject;
-@property (nonatomic, assign) BOOL isEnteringText;
+@property (nonatomic, retain) NSManagedObject *selectedIdea;
 
 
 - (void)showDeleteConfirmation:(id)sender;
 - (void)deleteCurrentObject;
+- (void)updateTitle;
 
 @end

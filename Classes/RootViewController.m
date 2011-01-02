@@ -7,12 +7,16 @@
 //
 
 #import "RootViewController.h"
-#import "CustomCell.h"
+#import "IdeaDetailViewController.h"
 #import "UIButton+Glossy.h"
+#import "ApplicationHelper.h"
 
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)editCurrentObject:(id)sender;
+- (void)showDetailView:(NSManagedObject *)aObject newIdea:(BOOL)newIdea;
+- (void)setupTableView;
 @end
 
 
@@ -20,66 +24,27 @@
 
 @synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_;
 
-@synthesize currentObject, isEnteringText;
+@synthesize selectedIdea;
 
 
 #pragma mark -
 #pragma mark View lifecycle
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	[self updateTitle];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] 
+								  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
+								  target:self 
+								  action:@selector(insertNewObject)];
+	
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
 	
-	if (currentObject) {
-		self.navigationItem.title = [NSString stringWithFormat:@"%@ (%d)",
-									 [currentObject valueForKey:@"name"], [[self.fetchedResultsController fetchedObjects] count]];
-	} else {
-		self.navigationItem.title = [NSString stringWithFormat:@"Ideas (%d)", [[self.fetchedResultsController fetchedObjects] count]];
-	}
-	
-	if (currentObject) {
-		// Configure header
-		
-		NSString *text = [currentObject valueForKey:@"name"];
-		
-		CGSize withinSize = CGSizeMake(300, 2000); // max size allowed
-		CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:withinSize lineBreakMode:UILineBreakModeWordWrap];
-		
-		UIView *containerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, size.height + 20)] autorelease];
-		UITextView *textArea = [[[UITextView alloc] initWithFrame:CGRectMake(10, 20, 300, size.height)] autorelease];
-		textArea.backgroundColor = [UIColor whiteColor];
-		textArea.text = text;
-		[containerView addSubview:textArea];
-		self.tableView.tableHeaderView = containerView;
-		
-		
-		// Configure footer
-		// http://www.mlsite.net/blog/?p=232
-		
-		UIView *footerContainerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 54)] autorelease];
-		UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		// button.frame = CGRectMake(0, 0, 310, 54);
-		button.frame = CGRectMake(10, 10, 300, 34);
-		
-		UIColor *redColor = [UIColor colorWithRed:.65 green:.05 blue:.05 alpha:1];
-		
-		[button setBackgroundToGlossyRectOfColor:redColor withBorder:YES forState:UIControlStateNormal];
-		
-		[button setTitle:@"Delete" forState:UIControlStateNormal];
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
-		[button.titleLabel setShadowOffset:CGSizeMake(0, -1)];
-		[button.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
-		
-		[button addTarget:self action:@selector(showDeleteConfirmation:) forControlEvents:UIControlEventTouchUpInside];
-		
-		[footerContainerView addSubview:button];
-		
-		self.tableView.tableFooterView = footerContainerView;
-	}
+	[self setupTableView];
 }
 
 
@@ -90,37 +55,108 @@
 }
 
 
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
 
 /*
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
- */
+*/
 
 
-- (void)configureCell:(CustomCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+#pragma mark -
+#pragma mark Helper methods
+
+- (UIButton *)deleteButton
+{
+	UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	
+	deleteButton.frame = CGRectMake(10, 60, 300, 34);
+	
+	UIColor *redColor = [UIColor colorWithRed:.65 green:.05 blue:.05 alpha:1];
+	
+	[deleteButton setBackgroundToGlossyRectOfColor:redColor withBorder:YES forState:UIControlStateNormal];
+	
+	[deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
+	[deleteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	[deleteButton setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
+	[deleteButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
+	[deleteButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+	
+	[deleteButton addTarget:self action:@selector(showDeleteConfirmation:) forControlEvents:UIControlEventTouchUpInside];
+	
+	return deleteButton;
+}
+
+- (UIButton *)editButton
+{
+	UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	
+	editButton.frame = CGRectMake(10, 10, 300, 34);
+	
+	UIColor *greenColor = [UIColor colorWithRed:.05 green:.65 blue:.05 alpha:1];
+	
+	[editButton setBackgroundToGlossyRectOfColor:greenColor withBorder:YES forState:UIControlStateNormal];
+	
+	[editButton setTitle:@"Edit" forState:UIControlStateNormal];
+	[editButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	[editButton setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
+	[editButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
+	[editButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+	
+	[editButton addTarget:self action:@selector(editCurrentObject:) forControlEvents:UIControlEventTouchUpInside];
+	
+	return editButton;
+}
+
+- (void)setupTableView {
+	if (!selectedIdea) {
+		return;
+	}
+	
+	// http://www.mlsite.net/blog/?p=232
+	
+	UIView *footerContainerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 100)] autorelease];
+	
+	[footerContainerView addSubview:[self editButton]];
+	[footerContainerView addSubview:[self deleteButton]];
+	
+	self.tableView.tableFooterView = footerContainerView;
+}
+
+
+- (void)updateTitle
+{
+	
+	NSString *countText;
+	if ([[self.fetchedResultsController fetchedObjects] count] > 0) {
+		countText = [NSString stringWithFormat:@" (%d)", [[self.fetchedResultsController fetchedObjects] count]];
+	} else {
+		countText = @"";
+	}
+
+	
+	if (selectedIdea) {
+		self.navigationItem.title = [NSString stringWithFormat:@"%@%@",
+									 [selectedIdea valueForKey:@"name"], countText];
+	} else {
+		self.navigationItem.title = [NSString stringWithFormat:@"Ideas%@", countText];
+	}
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.name.text = [managedObject valueForKey:@"name"];
-	cell.name.delegate = self;
+	cell.textLabel.text = [managedObject valueForKey:@"name"];
+	cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+	
+	cell.accessoryType = UIButtonTypeRoundedRect;
+	
+	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	cell.textLabel.numberOfLines = 0;
 }
 
 - (void)showDeleteConfirmation:(id)sender
@@ -135,6 +171,35 @@
 	[actionSheet showInView:self.view];
 	
 	[actionSheet release];
+}
+
+- (void)editCurrentObject:(id)sender
+{
+	[self showDetailView:selectedIdea newIdea:FALSE];
+}
+
+- (void)showDetailView:(NSManagedObject *)aObject newIdea:(BOOL)newIdea
+{
+	IdeaDetailViewController *detailViewController = [[IdeaDetailViewController alloc] initWithNibName:@"IdeaDetailViewController" bundle:nil];
+	detailViewController.idea = aObject;
+	detailViewController.delegate = self;
+	detailViewController.newIdea = newIdea;
+	
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+	
+	[self presentModalViewController:navigationController animated:YES];
+
+	[detailViewController release];
+	[navigationController release];
+}
+
+#pragma mark - IdeaDetailDelegate
+
+- (void)ideaDetailViewController:(IdeaDetailViewController *)ideaDetailViewController didSaveIdea:(NSManagedObject *)idea
+{
+	[self.tableView reloadData];
+	[self updateTitle];
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -153,50 +218,18 @@
 
 
 - (void)insertNewObject {
-    // Create a new instance of the entity managed by the fetched results controller.
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+	NSManagedObject *newManagedObject = [NSEntityDescription 
+										 insertNewObjectForEntityForName:@"Idea" 
+										 inManagedObjectContext:self.managedObjectContext];
 	
-	if (currentObject) {
-		[newManagedObject setValue:currentObject forKey:@"parent"];
+	
+	[newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+	
+	if (selectedIdea) {
+		[newManagedObject setValue:selectedIdea forKey:@"parent"];
 	}
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-														message:@"We experienced an error. Please quit the application by pressing the Home button." 
-													   delegate:self cancelButtonTitle:nil 
-											  otherButtonTitles:nil];
-		[alert show];
-		[alert release];
-    }
 	
-}
-
-- (void)updateObject:(NSIndexPath *)indexPath andName:(NSString *)name {
-	NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-
-	[managedObject setValue:name forKey:@"name"];
-	
-	NSError *error = nil;
-	if (![context save:&error]) {
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-														message:@"We experienced an error. Please quit the application by pressing the Home button." 
-													   delegate:self cancelButtonTitle:nil 
-											  otherButtonTitles:nil];
-		[alert show];
-		[alert release];
-	}
+	[self showDetailView:newManagedObject newIdea:YES];
 }
 
 - (void)deleteCurrentObject
@@ -204,18 +237,13 @@
 	
 	NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
 	
-	[context deleteObject:currentObject];
+	[context deleteObject:selectedIdea];
 	
 	NSError *error = nil;
 	if (![context save:&error]) {
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-														message:@"We experienced an error. Please quit the application by pressing the Home button." 
-													   delegate:self cancelButtonTitle:nil 
-											  otherButtonTitles:nil];
-		[alert show];
-		[alert release];
+		
+		[ApplicationHelper showApplicationError];
 	}
 	
 	[self.navigationController popViewControllerAnimated:YES];
@@ -228,46 +256,29 @@
     self.navigationItem.rightBarButtonItem.enabled = !editing;
 }
 
-- (void)showKeyboard:(NSIndexPath *)indexPath
-{
-	CustomCell *cell = (CustomCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-
-	[cell.name becomeFirstResponder];
-}
-
 
 #pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections] count];
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+	return [[self.fetchedResultsController fetchedObjects] count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"CustomCell";
+    static NSString *CellIdentifier = @"TableViewCell";
     
-	CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
     if (cell == nil) {
-        // cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		NSArray *topLevelObjects = [[NSBundle mainBundle]
-									loadNibNamed:@"CustomCell" owner:nil options:nil];
-		
-		for (id theObject in topLevelObjects) {
-			if ([theObject isKindOfClass:[UITableViewCell class]]) {
-				cell = (CustomCell *)theObject;
-				break;
-			}
-		}
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell.
@@ -275,16 +286,6 @@
     
     return cell;
 }
-
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 
 // Override to support editing the table view.
@@ -300,12 +301,7 @@
         if (![context save:&error]) {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-															message:@"We experienced an error. Please quit the application by pressing the Home button." 
-														   delegate:self cancelButtonTitle:nil 
-												  otherButtonTitles:nil];
-			[alert show];
-			[alert release];
+			[ApplicationHelper showApplicationError];
         }
     }   
 }
@@ -316,54 +312,42 @@
     return NO;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if (!selectedIdea) {
+		return nil;
+	}
+	
+	return [selectedIdea valueForKey:@"name"];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	NSString *cellText = [managedObject valueForKey:@"name"];
+	
+	UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+    CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
+    CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+    return labelSize.height + 20;
+}
 
 #pragma mark -
 #pragma mark Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	if (isEnteringText) {
-		return;
-	}
-	
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{	
 	RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
 	rootViewController.managedObjectContext = self.managedObjectContext;
 	
 	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	rootViewController.currentObject = managedObject;
+	rootViewController.selectedIdea = managedObject;
 	
 	[self.navigationController pushViewController:rootViewController animated:YES];
 	[rootViewController release];
 }
 
-
-#pragma mark -
-#pragma mark UITextField delegate methods
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-	isEnteringText = YES;
-	
-	self.navigationItem.rightBarButtonItem.enabled = FALSE;
-	return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-	[textField endEditing:YES];
-	
-	isEnteringText = FALSE;
-	
-	self.navigationItem.rightBarButtonItem.enabled = TRUE;
-	
-	CustomCell *cell = (CustomCell *)textField.superview.superview;
-
-	NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-	
-	[self updateObject:indexPath andName:textField.text];
-	
-	return YES;
-}
 
 
 #pragma mark -
@@ -388,7 +372,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -396,8 +380,8 @@
 	// Filter for parent_id
 	NSPredicate *predicate;
 	
-	if (currentObject) {
-		predicate = [NSPredicate predicateWithFormat:@"parent == %@", currentObject];
+	if (selectedIdea) {
+		predicate = [NSPredicate predicateWithFormat:@"parent == %@", selectedIdea];
 	} else {
 		predicate = [NSPredicate predicateWithFormat:@"parent == %@", [NSNull null]];
 	}
@@ -427,12 +411,7 @@
     if (![fetchedResultsController_ performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-														message:@"We experienced an error. Please quit the application by pressing the Home button." 
-													   delegate:self cancelButtonTitle:nil 
-											  otherButtonTitles:nil];
-		[alert show];
-		[alert release];
+		[ApplicationHelper showApplicationError];
     }
     
     return fetchedResultsController_;
@@ -450,7 +429,7 @@
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
-    
+    NSLog(@"Foo");
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
@@ -466,22 +445,18 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-    
+	
     UITableView *tableView = self.tableView;
     
     switch(type) {
             
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-
-			[self performSelector:@selector(showKeyboard:)
-								 withObject:newIndexPath
-								 afterDelay:0.5];
-			
             break;
             
         case NSFetchedResultsChangeDelete:
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+			[self updateTitle]; // reload title after deletion
             break;
             
         case NSFetchedResultsChangeUpdate:
@@ -531,7 +506,7 @@
 - (void)dealloc {
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
-	[currentObject release];
+	[selectedIdea release];
     [super dealloc];
 }
 

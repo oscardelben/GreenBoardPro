@@ -17,8 +17,13 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28D3F202112F7DC200FD0661 /* Ideas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Ideas.xcdatamodeld */; };
-		BF55E01312C8A51F00689625 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF55E01212C8A51F00689625 /* CustomCell.m */; };
-		BF55E01512C8A5AB00689625 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF55E01412C8A5AB00689625 /* CustomCell.xib */; };
+		BF12F6C012CF66B800159AE4 /* IdeaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF12F6BE12CF66B800159AE4 /* IdeaDetailViewController.m */; };
+		BF12F6C112CF66B800159AE4 /* IdeaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF12F6BF12CF66B800159AE4 /* IdeaDetailViewController.xib */; };
+		BF12F75D12CF9C1200159AE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF12F75C12CF9C1200159AE4 /* QuartzCore.framework */; };
+		BF4F7C0D12D07241007CB6E2 /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */; };
+		BF4F7CC012D0A22E007CB6E2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CBF12D0A22E007CB6E2 /* Icon.png */; };
+		BF4F7CE712D0A80A007CB6E2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CE612D0A80A007CB6E2 /* Default.png */; };
+		BF4F7CF112D0C53D007CB6E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */; };
 		BFA0DC3812CB200700C07211 /* UIButton+Glossy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +43,15 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Ideas-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Ideas-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		BF55E01112C8A51F00689625 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		BF55E01212C8A51F00689625 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		BF55E01412C8A5AB00689625 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		BF12F6BD12CF66B800159AE4 /* IdeaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaDetailViewController.h; sourceTree = "<group>"; };
+		BF12F6BE12CF66B800159AE4 /* IdeaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaDetailViewController.m; sourceTree = "<group>"; };
+		BF12F6BF12CF66B800159AE4 /* IdeaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IdeaDetailViewController.xib; path = Classes/IdeaDetailViewController.xib; sourceTree = "<group>"; };
+		BF12F75C12CF9C1200159AE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BF4F7C0B12D07241007CB6E2 /* ApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationHelper.h; sourceTree = "<group>"; };
+		BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationHelper.m; sourceTree = "<group>"; };
+		BF4F7CBF12D0A22E007CB6E2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BF4F7CE612D0A80A007CB6E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		BFA0DC3612CB200700C07211 /* UIButton+Glossy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Glossy.h"; sourceTree = "<group>"; };
 		BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Glossy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +65,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+				BF12F75D12CF9C1200159AE4 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +79,12 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* IdeasAppDelegate.h */,
 				1D3623250D0F684500981E51 /* IdeasAppDelegate.m */,
-				BF55E01112C8A51F00689625 /* CustomCell.h */,
-				BF55E01212C8A51F00689625 /* CustomCell.m */,
 				BFA0DC3612CB200700C07211 /* UIButton+Glossy.h */,
 				BFA0DC3712CB200700C07211 /* UIButton+Glossy.m */,
+				BF12F6BD12CF66B800159AE4 /* IdeaDetailViewController.h */,
+				BF12F6BE12CF66B800159AE4 /* IdeaDetailViewController.m */,
+				BF4F7C0B12D07241007CB6E2 /* ApplicationHelper.h */,
+				BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -91,6 +105,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				BF12F75C12CF9C1200159AE4 /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -109,9 +124,12 @@
 			children = (
 				28D3F201112F7DC200FD0661 /* Ideas.xcdatamodeld */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */,
+				BF4F7CBF12D0A22E007CB6E2 /* Icon.png */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				BF12F6BF12CF66B800159AE4 /* IdeaDetailViewController.xib */,
 				8D1107310486CEB800E47090 /* Ideas-Info.plist */,
-				BF55E01412C8A5AB00689625 /* CustomCell.xib */,
+				BF4F7CE612D0A80A007CB6E2 /* Default.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -179,7 +197,10 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
-				BF55E01512C8A5AB00689625 /* CustomCell.xib in Resources */,
+				BF12F6C112CF66B800159AE4 /* IdeaDetailViewController.xib in Resources */,
+				BF4F7CC012D0A22E007CB6E2 /* Icon.png in Resources */,
+				BF4F7CE712D0A80A007CB6E2 /* Default.png in Resources */,
+				BF4F7CF112D0C53D007CB6E2 /* iTunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +215,9 @@
 				1D3623260D0F684500981E51 /* IdeasAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				28D3F202112F7DC200FD0661 /* Ideas.xcdatamodeld in Sources */,
-				BF55E01312C8A51F00689625 /* CustomCell.m in Sources */,
 				BFA0DC3812CB200700C07211 /* UIButton+Glossy.m in Sources */,
+				BF12F6C012CF66B800159AE4 /* IdeaDetailViewController.m in Sources */,
+				BF4F7C0D12D07241007CB6E2 /* ApplicationHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
