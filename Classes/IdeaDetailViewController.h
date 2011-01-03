@@ -35,5 +35,6 @@
 @protocol IdeaDetailDelegate <NSObject>
 
 - (void)ideaDetailViewController:(IdeaDetailViewController *)ideaDetailViewController didSaveIdea:(NSManagedObject *)idea;
+- (void)ideaDetailViewControllerDidForceDelete:(IdeaDetailViewController *)ideaDetailViewController;
 
 @end

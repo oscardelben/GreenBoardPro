@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 #import "IdeaDetailViewController.h"
-#import "UIButton+Glossy.h"
 #import "ApplicationHelper.h"
 
 
@@ -16,7 +15,6 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)editCurrentObject:(id)sender;
 - (void)showDetailView:(NSManagedObject *)aObject newIdea:(BOOL)newIdea;
-- (void)setupTableView;
 @end
 
 
@@ -44,7 +42,46 @@
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
 	
-	[self setupTableView];
+	self.tableView.backgroundColor = [UIColor clearColor]; // Display image under the view
+	
+	self.tableView.separatorColor = [UIColor colorWithRed:34/255.0 green:76/255.0 blue:72/255.0 alpha:1];
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	
+	// toolbar
+	if (selectedIdea) {
+		self.navigationController.toolbarHidden = NO;
+		
+		UIBarButtonItem *flexibleSPace = [[UIBarButtonItem alloc]
+										  initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace 
+										  target:nil 
+										  action:nil];
+		
+		UIBarButtonItem *editItem = [[UIBarButtonItem alloc] 
+									 initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+									 target:self 
+									 action:@selector(editCurrentObject:)];
+		UIBarButtonItem *deleteItem = [[UIBarButtonItem alloc] 
+									 initWithBarButtonSystemItem:UIBarButtonSystemItemTrash 
+									 target:self 
+									 action:@selector(showDeleteConfirmation:)];
+		UIBarButtonItem *exportItem = [[UIBarButtonItem alloc] 
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+									   target:self 
+									   action:nil];
+		
+		self.toolbarItems = [NSArray arrayWithObjects:
+							 flexibleSPace, 
+							 editItem, 
+							 flexibleSPace, 
+							 exportItem, 
+							 flexibleSPace, 
+							 deleteItem, 
+							 flexibleSPace, 
+							 nil];
+	} else {
+		self.navigationController.toolbarHidden = YES;
+	}
+
 }
 
 
@@ -52,6 +89,13 @@
 // Implement viewWillAppear: to do additional setup before the view is presented.
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	
+	if (selectedIdea) {
+		[self.navigationController setToolbarHidden:NO animated:NO];
+	} else {
+		[self.navigationController setToolbarHidden:YES animated:YES];
+	}
+
 }
 
 
@@ -68,64 +112,6 @@
 
 #pragma mark -
 #pragma mark Helper methods
-
-- (UIButton *)deleteButton
-{
-	UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	
-	deleteButton.frame = CGRectMake(10, 60, 300, 34);
-	
-	UIColor *redColor = [UIColor colorWithRed:.65 green:.05 blue:.05 alpha:1];
-	
-	[deleteButton setBackgroundToGlossyRectOfColor:redColor withBorder:YES forState:UIControlStateNormal];
-	
-	[deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
-	[deleteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-	[deleteButton setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
-	[deleteButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
-	[deleteButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
-	
-	[deleteButton addTarget:self action:@selector(showDeleteConfirmation:) forControlEvents:UIControlEventTouchUpInside];
-	
-	return deleteButton;
-}
-
-- (UIButton *)editButton
-{
-	UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	
-	editButton.frame = CGRectMake(10, 10, 300, 34);
-	
-	UIColor *greenColor = [UIColor colorWithRed:.05 green:.65 blue:.05 alpha:1];
-	
-	[editButton setBackgroundToGlossyRectOfColor:greenColor withBorder:YES forState:UIControlStateNormal];
-	
-	[editButton setTitle:@"Edit" forState:UIControlStateNormal];
-	[editButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-	[editButton setTitleShadowColor:[UIColor colorWithRed:.25 green:.25 blue:.25 alpha:1] forState:UIControlStateNormal];
-	[editButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
-	[editButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
-	
-	[editButton addTarget:self action:@selector(editCurrentObject:) forControlEvents:UIControlEventTouchUpInside];
-	
-	return editButton;
-}
-
-- (void)setupTableView {
-	if (!selectedIdea) {
-		return;
-	}
-	
-	// http://www.mlsite.net/blog/?p=232
-	
-	UIView *footerContainerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 100)] autorelease];
-	
-	[footerContainerView addSubview:[self editButton]];
-	[footerContainerView addSubview:[self deleteButton]];
-	
-	self.tableView.tableFooterView = footerContainerView;
-}
-
 
 - (void)updateTitle
 {
@@ -157,6 +143,12 @@
 	
 	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 	cell.textLabel.numberOfLines = 0;
+	
+	cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-light.png"]];
+	
+	UIView *selectedView = [[[UIView alloc] init] autorelease];
+	selectedView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-selected.png"]];
+	cell.selectedBackgroundView = selectedView;
 }
 
 - (void)showDeleteConfirmation:(id)sender
@@ -200,6 +192,15 @@
 	[self.tableView reloadData];
 	[self updateTitle];
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)ideaDetailViewControllerDidForceDelete:(IdeaDetailViewController *)ideaDetailViewController
+{
+	[self.tableView reloadData];
+	[self updateTitle];
+	[self dismissModalViewControllerAnimated:YES];
+	
+	[self.navigationController popViewControllerAnimated:NO];
 }
 
 #pragma mark -
@@ -310,15 +311,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // The table view should not be re-orderable.
     return NO;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	if (!selectedIdea) {
-		return nil;
-	}
-	
-	return [selectedIdea valueForKey:@"name"];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

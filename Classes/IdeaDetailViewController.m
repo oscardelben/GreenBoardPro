@@ -54,8 +54,9 @@
     self.navigationItem.rightBarButtonItem = saveButtonItem;
     [saveButtonItem release];
 	
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:53/255.0 green:161/255.0 blue:95/255.0 alpha:1];
 	
-	[self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-dark.png"]]];
 	
 	[name becomeFirstResponder];
 }
@@ -82,7 +83,11 @@
 
 - (void)save
 {
-	NSLog(@"%@", idea);
+	if (name.text.length == 0) {
+		[idea.managedObjectContext deleteObject:idea];
+		[delegate ideaDetailViewControllerDidForceDelete:self];
+		return;
+	}
 	[idea setValue:name.text forKey:@"name"];
 	
 	NSError *error = nil;

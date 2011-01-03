@@ -1,0 +1,2 @@
+In file included from /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m:9:
+/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.h:40: error: expected ';' before 'end'
