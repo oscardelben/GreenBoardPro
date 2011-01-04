@@ -24,24 +24,34 @@
 
 + (NSDictionary *)themes
 {
+	
+	NSArray *keys = [NSArray arrayWithObjects:@"red", @"green", @"blue", @"background", @"foreground", @"selected", nil];
+	
 	NSDictionary *theme1 = [NSDictionary 
 							dictionaryWithObjects:
 							[NSArray arrayWithObjects:
-								[NSInteger initWithInt:53], 
-								[NSInteger initWithInt:161], 
-								[NSInteger initWithInt:95],
-								@"bg-white",
-								@"bg-yellow",
-								@"bg-yellow",
+								[NSNumber numberWithInt:53], 
+								[NSNumber numberWithInt:161], 
+								[NSNumber numberWithInt:95],
+								@"bg-green-dark.png",
+								@"bg-green-light.png",
+								@"bg-green-middle.png",
 								nil] 
-							forKeys:
-							[NSArray arrayWithObjects:@"red", @"green", @"blue", @"background", @"foreground", @"selected", nil]];
+							forKeys: keys];
 	
 	NSDictionary *theme4 = [NSDictionary 
 							dictionaryWithObjects:
-								[NSArray arrayWithObjects:19, 60, 101, nil] 
-							forKeys:
-								[NSArray arrayWithObjects:@"red", @"green", @"blue", nil]];
+								[NSArray arrayWithObjects:
+									[NSNumber numberWithInt:19], 
+									[NSNumber numberWithInt:60], 
+									[NSNumber numberWithInt:101], 
+									@"bg-white.png",
+									@"bg-yellow.png",
+									@"bg-yellow.png",
+									nil] 
+							forKeys: keys];
+	
+	
 }
 
 @end

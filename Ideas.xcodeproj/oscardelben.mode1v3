@@ -331,15 +331,13 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF996EF712D344E900916A41</string>
+										<string>BF996F2312D3465900916A41</string>
 										<key>history</key>
 										<array>
 											<string>BFA0DB0412C90DD400C07211</string>
 											<string>BF4F7CCC12D0A5D2007CB6E2</string>
 											<string>BF4F7CFF12D0C8AA007CB6E2</string>
 											<string>BF4F7D1412D0C9BE007CB6E2</string>
-											<string>BF4F7DED12D1D976007CB6E2</string>
-											<string>BF4F7E1012D1DED2007CB6E2</string>
 											<string>BF4F7E5C12D1F93E007CB6E2</string>
 											<string>BF4F7E5D12D1F93E007CB6E2</string>
 											<string>BF996E5B12D28BAA00916A41</string>
@@ -350,7 +348,9 @@
 											<string>BF996EF312D344E900916A41</string>
 											<string>BF996EF412D344E900916A41</string>
 											<string>BF996EF512D344E900916A41</string>
-											<string>BF996EF612D344E900916A41</string>
+											<string>BF996F1B12D3461900916A41</string>
+											<string>BF996F1C12D3461900916A41</string>
+											<string>BF996F1D12D3461900916A41</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -362,14 +362,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1068, 445}}</string>
+								<string>{{0, 0}, {1068, 438}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>445pt</string>
+							<string>438pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -382,14 +382,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 450}, {1068, 232}}</string>
+								<string>{{0, 443}, {1068, 239}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>232pt</string>
+							<string>239pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -408,9 +408,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>BF996E6012D28BAA00916A41</string>
+				<string>BF996F0D12D3452A00916A41</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>BF996E6112D28BAA00916A41</string>
+				<string>BF996F0E12D3452A00916A41</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -548,10 +548,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BF996E7112D28DB900916A41</string>
-		<string>BF996E7212D28DB900916A41</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>BF55DF8B12C88FDB00689625</string>
 		<string>/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcodeproj</string>
 	</array>
@@ -633,7 +629,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>BF55DF8B12C88FDB00689625</string>
-				<string>BF996E6212D28BAA00916A41</string>
+				<string>BF996F0F12D3452A00916A41</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

@@ -27,6 +27,8 @@
 		BF996EDC12D338CD00916A41 /* bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996ED912D338CD00916A41 /* bg-white.png */; };
 		BF996EDD12D338CD00916A41 /* bg-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDA12D338CD00916A41 /* bg-yellow.png */; };
 		BF996EDE12D338CD00916A41 /* bg-green-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDB12D338CD00916A41 /* bg-green-middle.png */; };
+		BF996F1112D3455600916A41 /* bg-green-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996F1012D3455600916A41 /* bg-green-dark.png */; };
+		BF996F1312D3455C00916A41 /* bg-green-light.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996F1212D3455C00916A41 /* bg-green-light.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		BF996ED912D338CD00916A41 /* bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-white.png"; sourceTree = "<group>"; };
 		BF996EDA12D338CD00916A41 /* bg-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yellow.png"; sourceTree = "<group>"; };
 		BF996EDB12D338CD00916A41 /* bg-green-middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-middle.png"; sourceTree = "<group>"; };
+		BF996F1012D3455600916A41 /* bg-green-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-dark.png"; sourceTree = "<group>"; };
+		BF996F1212D3455C00916A41 /* bg-green-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-light.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				BF996ED912D338CD00916A41 /* bg-white.png */,
+				BF996F1012D3455600916A41 /* bg-green-dark.png */,
+				BF996F1212D3455C00916A41 /* bg-green-light.png */,
 				BF996EDA12D338CD00916A41 /* bg-yellow.png */,
 				BF996EDB12D338CD00916A41 /* bg-green-middle.png */,
 			);
@@ -216,6 +222,8 @@
 				BF996EDC12D338CD00916A41 /* bg-white.png in Resources */,
 				BF996EDD12D338CD00916A41 /* bg-yellow.png in Resources */,
 				BF996EDE12D338CD00916A41 /* bg-green-middle.png in Resources */,
+				BF996F1112D3455600916A41 /* bg-green-dark.png in Resources */,
+				BF996F1312D3455C00916A41 /* bg-green-light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
