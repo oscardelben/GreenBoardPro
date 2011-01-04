@@ -1,7 +1,7 @@
 TIdeas
 v7
 r0
-t315788777.540338
+t315830434.299681
 cCheck dependencies
 cCpResource build/Debug-iphoneos/Ideas.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
 cProcessInfoPlistFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Info.plist Ideas-Info.plist
@@ -22,13 +22,13 @@ cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Idea
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/RootViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeaDetailViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/ApplicationHelper.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/ApplicationHelper.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas normal armv6
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/main.o /Users/oscardelben/projects/cocoa/apps/Ideas/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/RootViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeaDetailViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/ApplicationHelper.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/ApplicationHelper.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas normal armv7
+cLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas normal armv6
 cCreateUniversalBinary /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas normal "armv6 armv7"
 cGenerateDSYMFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas
 cProcessProductPackaging "/Users/oscardelben/Library/MobileDevice/Provisioning Profiles/3F5D3C07-1B4F-49C6-BF2E-F95BA0AF9457.mobileprovision" /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/embedded.mobileprovision
@@ -162,8 +162,8 @@ i<UIKit/UIKit.h>
 i<CoreData/CoreData.h>
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m
-c000000004D224B1F0000000000002123
-t1294093087
+c000000004D22F6420000000000002123
+t1294136898
 s8483
 i"IdeasAppDelegate.h"
 i"RootViewController.h"
@@ -236,14 +236,14 @@ t1293444986
 s18844
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/bg-dark.png
-c000000004D219B080000000000001297
-t1294048008
-s4759
+c000000004D22F4FA0000000000001765
+t1294136570
+s5989
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/bg-light.png
-c000000004D2105D4000000000000B8FD
-t1294009812
-s47357
+c000000004D22F51E0000000000001766
+t1294136606
+s5990
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/bg-selected.png
 c000000004D21A04600000000000013BE
@@ -251,11 +251,11 @@ t1294049350
 s5054
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app
-t1294095913
+t1294137634
 s646
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM
-t1294095912
+t1294137633
 s102
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/CustomCell.nib
@@ -275,8 +275,8 @@ t1294051747
 s1553
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas
-t1294095912
-s118128
+t1294137633
+s107980
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas.momd
 t1294049418
@@ -303,12 +303,12 @@ t1294049415
 s971
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-dark.png
-t1294049416
-s4881
+t1294137630
+s6377
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-light.png
-t1294049416
-s47159
+t1294137630
+s6352
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-selected.png
 t1294049464
@@ -347,7 +347,7 @@ t1294095402
 s55648
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas
-t1294095912
+t1294137633
 s50712
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas.LinkFileList
@@ -356,7 +356,7 @@ t1294095400
 s649
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeasAppDelegate.o
-t1294095402
+t1294137632
 s68868
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/RootViewController.o
@@ -384,7 +384,7 @@ t1294095403
 s55360
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas
-t1294095912
+t1294137633
 s50636
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas.LinkFileList
@@ -393,7 +393,7 @@ t1294095400
 s649
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o
-t1294095403
+t1294137632
 s68616
 
 N/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/RootViewController.o
@@ -444,16 +444,15 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies315788777#315788777#0(0"0(0#1#0"8632089152#0"0#
+lSLF07#2@18"Check dependencies315830430#315830430#0(0"0(0#1#0"8632356032#0"0#
 
 CCodeSign /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app
-s315788777.308373
-e315788777.540293
+s315830433.406212
+e315830434.299525
 r1
 xCodeSign
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app
-o/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app: replacing existing signature
-lSLF07#2@39"CodeSign build/Debug-iphoneos/Ideas.app315788777#315788777#0(106"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app: replacing existing signature0(0#0#75"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app8629271008#663"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Oscar Del Ben (A8N8V9WW32)" --resource-rules=/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/ResourceRules.plist --entitlements /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas.xcent /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app0#
+lSLF07#2@39"CodeSign build/Debug-iphoneos/Ideas.app315830433#315830434#0(0"0(0#0#75"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app8636360544#663"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Oscar Del Ben (A8N8V9WW32)" --resource-rules=/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/ResourceRules.plist --entitlements /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas.xcent /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app0#
 
 CCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/ApplicationHelper.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/ApplicationHelper.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s315742218.515295
@@ -495,8 +494,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@87"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m315788202#315788202#0(0"0(0#0#79"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m8633153984#1798"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv6 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-atdcstjmprnfnwbdgkjezimtupzq/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeaDetailViewController.o0#
 
 CCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeasAppDelegate.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s315788201.345951
-e315788202.149672
+s315830430.435101
+e315830432.464953
 r1
 xCompileC
 xbuild/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeasAppDelegate.o
@@ -505,7 +504,7 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m315788201#315788202#0(0"0(0#0#71"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m8630370080#1782"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv6 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-atdcstjmprnfnwbdgkjezimtupzq/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeasAppDelegate.o0#
+lSLF07#2@79"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m315830430#315830432#0(0"0(0#0#71"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m8630441408#1782"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv6 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-atdcstjmprnfnwbdgkjezimtupzq/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/IdeasAppDelegate.o0#
 
 CCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/RootViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s315788711.894016
@@ -586,8 +585,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@87"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m315788203#315788203#0(0"0(0#0#79"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m8633378368#1798"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv7 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-hbawqokbpurqdyeynpwdkfqnibuk/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeaDetailViewController.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeaDetailViewController.o0#
 
 CCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s315788202.190739
-e315788203.728471
+s315830430.437211
+e315830432.421937
 r1
 xCompileC
 xbuild/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o
@@ -596,7 +595,7 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m315788202#315788203#0(0"0(0#0#71"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m8632010400#1782"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv7 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-hbawqokbpurqdyeynpwdkfqnibuk/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o0#
+lSLF07#2@79"Compile /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m315830430#315830432#0(0"0(0#0#71"/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m8630253376#1782"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-generated-files.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-own-target-headers.hmap -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-all-target-headers.hmap -iquote /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas-project-headers.hmap -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/include -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources/armv7 -I/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/DerivedSources -include /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-hbawqokbpurqdyeynpwdkfqnibuk/Ideas_Prefix.pch -c /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/IdeasAppDelegate.m -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/IdeasAppDelegate.o0#
 
 CCompileC build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/RootViewController.o /Users/oscardelben/projects/cocoa/apps/Ideas/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 s315788712.043733
@@ -688,22 +687,22 @@ xIcon.png
 lSLF07#2@60"CopyPNGFile build/Debug-iphoneos/Ideas.app/Icon.png Icon.png315742215#315742215#0(0"0(0#0#53"/Users/oscardelben/projects/cocoa/apps/Ideas/Icon.png8659895712#572"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/oscardelben/projects/cocoa/apps/Ideas/Icon.png /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Icon.png0#
 
 CCopyPNGFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-dark.png bg-dark.png
-s315742216.632916
-e315742216.664329
+s315830430.089974
+e315830430.424571
 r1
 xCopyPNGFile
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-dark.png
 xbg-dark.png
-lSLF07#2@66"CopyPNGFile build/Debug-iphoneos/Ideas.app/bg-dark.png bg-dark.png315742216#315742216#0(0"0(0#0#56"/Users/oscardelben/projects/cocoa/apps/Ideas/bg-dark.png8661225952#578"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/oscardelben/projects/cocoa/apps/Ideas/bg-dark.png /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-dark.png0#
+lSLF07#2@66"CopyPNGFile build/Debug-iphoneos/Ideas.app/bg-dark.png bg-dark.png315830430#315830430#0(0"0(0#0#56"/Users/oscardelben/projects/cocoa/apps/Ideas/bg-dark.png8630501344#578"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/oscardelben/projects/cocoa/apps/Ideas/bg-dark.png /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-dark.png0#
 
 CCopyPNGFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-light.png bg-light.png
-s315742216.438904
-e315742216.632817
+s315830430.088718
+e315830430.434553
 r1
 xCopyPNGFile
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-light.png
 xbg-light.png
-lSLF07#2@68"CopyPNGFile build/Debug-iphoneos/Ideas.app/bg-light.png bg-light.png315742216#315742216#0(0"0(0#0#57"/Users/oscardelben/projects/cocoa/apps/Ideas/bg-light.png8620315072#580"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/oscardelben/projects/cocoa/apps/Ideas/bg-light.png /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-light.png0#
+lSLF07#2@68"CopyPNGFile build/Debug-iphoneos/Ideas.app/bg-light.png bg-light.png315830430#315830430#0(0"0(0#0#57"/Users/oscardelben/projects/cocoa/apps/Ideas/bg-light.png8630587776#580"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/oscardelben/projects/cocoa/apps/Ideas/bg-light.png /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-light.png0#
 
 CCopyPNGFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/bg-selected.png bg-selected.png
 s315742264.428676
@@ -751,14 +750,14 @@ x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceR
 lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist315742214#315742214#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8654103264#504"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app0#
 
 CCreateUniversalBinary /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas normal "armv6 armv7"
-s315788712.370653
-e315788712.409073
+s315830433.264865
+e315830433.310744
 r1
 xCreateUniversalBinary
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas
 xnormal
 xarmv6 armv7
-lSLF07#2@79"CreateUniversalBinary build/Debug-iphoneos/Ideas.app/Ideas normal "armv6 armv7"315788712#315788712#0(0"0(0#0#56"/Users/oscardelben/projects/cocoa/apps/Ideas/armv6 armv78630598016#526"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas -output /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas0#
+lSLF07#2@79"CreateUniversalBinary build/Debug-iphoneos/Ideas.app/Ideas normal "armv6 armv7"315830433#315830433#0(0"0(0#0#56"/Users/oscardelben/projects/cocoa/apps/Ideas/armv6 armv78636030816#526"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas -output /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas0#
 
 CDataModelVersionCompile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas.momd /Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld
 s315742218.135461
@@ -770,33 +769,33 @@ x/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld
 lSLF07#2@84"DataModelVersionCompile build/Debug-iphoneos/Ideas.app/Ideas.momd Ideas.xcdatamodeld315742218#315742218#0(0"0(0#0#63"/Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld8661753440#355"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc /Users/oscardelben/projects/cocoa/apps/Ideas/Ideas.xcdatamodeld /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas.momd0#
 
 CGenerateDSYMFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas
-s315788712.409433
-e315788712.548640
+s315830433.310843
+e315830433.402882
 r1
 xGenerateDSYMFile
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas
-lSLF07#2@89"GenerateDSYMFile build/Debug-iphoneos/Ideas.app.dSYM build/Debug-iphoneos/Ideas.app/Ideas315788712#315788712#0(0"0(0#0#81"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas8614043680#374"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM0#
+lSLF07#2@89"GenerateDSYMFile build/Debug-iphoneos/Ideas.app.dSYM build/Debug-iphoneos/Ideas.app/Ideas315830433#315830433#0(0"0(0#0#81"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas8630293344#374"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Ideas -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app.dSYM0#
 
 CLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas normal armv6
-s315788712.258507
-e315788712.363315
+s315830432.465052
+e315830433.264779
 r1
 xLd
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas
 xnormal
 xarmv6
-lSLF07#2@121"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas315788712#315788712#0(0"0(0#0#0"8634642048#919"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework QuartzCore -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas0#
+lSLF07#2@121"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas315830432#315830433#0(0"0(0#0#0"8634033088#919"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework QuartzCore -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv6/Ideas0#
 
 CLd /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas normal armv7
-s315788712.259710
-e315788712.370548
+s315830432.422436
+e315830433.264382
 r1
 xLd
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas
 xnormal
 xarmv7
-lSLF07#2@121"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas315788712#315788712#0(0"0(0#0#0"8633896320#919"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework QuartzCore -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas0#
+lSLF07#2@121"Link /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas315830432#315830433#0(0"0(0#0#0"8633300992#919"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -F/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos -filelist /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework QuartzCore -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Objects-normal/armv7/Ideas0#
 
 CProcessInfoPlistFile /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app/Info.plist Ideas-Info.plist
 s315742214.660771
@@ -861,10 +860,10 @@ x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/I
 lSLF07#2@169"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas.xcent315742219#315742219#0(0"0(0#0#101"/Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas.xcent8616389312#438"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphoneos/Ideas.build/Ideas.xcent0#
 
 CTouch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app
-s315788712.548872
-e315788712.582864
+s315830433.403139
+e315830433.406047
 r1
 xTouch
 x/Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app
-lSLF07#2@81"Touch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app315788712#315788712#0(0"0(0#0#0"8634868416#274"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app0#
+lSLF07#2@81"Touch /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app315830433#315830433#0(0"0(0#0#0"8636646528#274"    cd /Users/oscardelben/projects/cocoa/apps/Ideas    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphoneos/Ideas.app0#
 
