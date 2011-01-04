@@ -100,14 +100,14 @@
 
 
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     // return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
-*/
+
 
 
 #pragma mark -
@@ -322,7 +322,7 @@
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
     CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
 	
-    return labelSize.height + 20;
+    return labelSize.height + 25;
 }
 
 #pragma mark -

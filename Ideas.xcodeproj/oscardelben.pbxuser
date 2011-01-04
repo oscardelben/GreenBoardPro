@@ -188,16 +188,16 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1007, 6487}}";
-			sepNavSelRange = "{1084, 0}";
-			sepNavVisRange = "{807, 1267}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 6422}}";
+			sepNavSelRange = "{9695, 0}";
+			sepNavVisRange = "{8737, 1011}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = BF55DF7412C88E6700689625 /* Ideas */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Ideas */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Ideas */,
@@ -274,6 +274,13 @@
 			BF996E1212D27AE400916A41 = BF996E1212D27AE400916A41 /* PBXTextBookmark */;
 			BF996E1312D27AE400916A41 = BF996E1312D27AE400916A41 /* PBXTextBookmark */;
 			BF996E1412D27AE400916A41 = BF996E1412D27AE400916A41 /* PBXTextBookmark */;
+			BF996E5B12D28BAA00916A41 /* PBXTextBookmark */ = BF996E5B12D28BAA00916A41 /* PBXTextBookmark */;
+			BF996E5C12D28BAA00916A41 /* PBXTextBookmark */ = BF996E5C12D28BAA00916A41 /* PBXTextBookmark */;
+			BF996E5D12D28BAA00916A41 /* PBXTextBookmark */ = BF996E5D12D28BAA00916A41 /* PBXTextBookmark */;
+			BF996E5E12D28BAA00916A41 /* PBXTextBookmark */ = BF996E5E12D28BAA00916A41 /* PBXTextBookmark */;
+			BF996E5F12D28BAA00916A41 /* PBXTextBookmark */ = BF996E5F12D28BAA00916A41 /* PBXTextBookmark */;
+			BF996E6E12D28DB900916A41 /* PBXTextBookmark */ = BF996E6E12D28DB900916A41 /* PBXTextBookmark */;
+			BF996E6F12D28DB900916A41 /* PBXTextBookmark */ = BF996E6F12D28DB900916A41 /* PBXTextBookmark */;
 			BFA0DB0412C90DD400C07211 = BFA0DB0412C90DD400C07211 /* XDModelBookmark */;
 		};
 		sourceControlManager = BF55DF8012C88E8500689625 /* Source Control */;
@@ -471,7 +478,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 226";
 		rLen = 0;
-		rLoc = 5894;
+		rLoc = 6027;
 		rType = 0;
 		vrLen = 1091;
 		vrLoc = 716;
@@ -481,10 +488,80 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 39";
 		rLen = 187;
-		rLoc = 812;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 1076;
 		vrLoc = 731;
+	};
+	BF996E5B12D28BAA00916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 13";
+		rLen = 21;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 885;
+		vrLoc = 0;
+	};
+	BF996E5C12D28BAA00916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IdeasAppDelegate.h */;
+		name = "IdeasAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 999;
+		vrLoc = 0;
+	};
+	BF996E5D12D28BAA00916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IdeasAppDelegate.m */;
+		name = "IdeasAppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 996;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 321;
+	};
+	BF996E5E12D28BAA00916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 45";
+		rLen = 0;
+		rLoc = 1056;
+		rType = 0;
+		vrLen = 1181;
+		vrLoc = 807;
+	};
+	BF996E5F12D28BAA00916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 97";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 798;
+		vrLoc = 2456;
+	};
+	BF996E6E12D28DB900916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 97";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 798;
+		vrLoc = 2456;
+	};
+	BF996E6F12D28DB900916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 325";
+		rLen = 0;
+		rLoc = 9695;
+		rType = 0;
+		vrLen = 1011;
+		vrLoc = 8737;
 	};
 	BFA0DB0412C90DD400C07211 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
