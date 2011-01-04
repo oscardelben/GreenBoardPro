@@ -22,4 +22,26 @@
 	[alert release];
 }
 
++ (NSDictionary *)themes
+{
+	NSDictionary *theme1 = [NSDictionary 
+							dictionaryWithObjects:
+							[NSArray arrayWithObjects:
+								[NSInteger initWithInt:53], 
+								[NSInteger initWithInt:161], 
+								[NSInteger initWithInt:95],
+								@"bg-white",
+								@"bg-yellow",
+								@"bg-yellow",
+								nil] 
+							forKeys:
+							[NSArray arrayWithObjects:@"red", @"green", @"blue", @"background", @"foreground", @"selected", nil]];
+	
+	NSDictionary *theme4 = [NSDictionary 
+							dictionaryWithObjects:
+								[NSArray arrayWithObjects:19, 60, 101, nil] 
+							forKeys:
+								[NSArray arrayWithObjects:@"red", @"green", @"blue", nil]];
+}
+
 @end

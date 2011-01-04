@@ -15,4 +15,6 @@
 
 + (void)showApplicationError;
 
++ (NSDictionary *)themes;
+
 @end
