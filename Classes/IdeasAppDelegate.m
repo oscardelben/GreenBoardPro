@@ -29,8 +29,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-	navigationController.navigationBar.tintColor = [UIColor colorWithRed:208/255.0 green:31/255.0 blue:60/255.0 alpha:1];
-	navigationController.toolbar.tintColor = [UIColor colorWithRed:208/255.0 green:31/255.0 blue:60/255.0 alpha:1];
+	navigationController.navigationBar.tintColor = [UIColor colorWithRed:19/255.0 green:60/255.0 blue:101/255.0 alpha:1];
+	navigationController.toolbar.tintColor = [UIColor colorWithRed:19/255.0 green:60/255.0 blue:101/255.0 alpha:1];
 	
 	navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-dark.png"]];
 

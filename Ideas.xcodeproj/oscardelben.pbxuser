@@ -197,7 +197,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = BF55DF7412C88E6700689625 /* Ideas */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Ideas */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Ideas */,
@@ -289,6 +289,7 @@
 			BF996E8B12D32D9900916A41 /* PBXTextBookmark */ = BF996E8B12D32D9900916A41 /* PBXTextBookmark */;
 			BF996E8E12D32DC300916A41 /* PBXTextBookmark */ = BF996E8E12D32DC300916A41 /* PBXTextBookmark */;
 			BF996E9112D330A300916A41 /* PBXTextBookmark */ = BF996E9112D330A300916A41 /* PBXTextBookmark */;
+			BF996E9F12D333FE00916A41 /* PBXTextBookmark */ = BF996E9F12D333FE00916A41 /* PBXTextBookmark */;
 			BFA0DB0412C90DD400C07211 = BFA0DB0412C90DD400C07211 /* XDModelBookmark */;
 		};
 		sourceControlManager = BF55DF8012C88E8500689625 /* Source Control */;
@@ -642,6 +643,16 @@
 		vrLoc = 321;
 	};
 	BF996E9112D330A300916A41 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IdeasAppDelegate.m */;
+		name = "IdeasAppDelegate.m: 33";
+		rLen = 0;
+		rLoc = 976;
+		rType = 0;
+		vrLen = 1488;
+		vrLoc = 321;
+	};
+	BF996E9F12D333FE00916A41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* IdeasAppDelegate.m */;
 		name = "IdeasAppDelegate.m: 33";

@@ -1,7 +1,8 @@
+d3f10df2a3f7d76e5c0d8ca298dccaac 234d3c3403e96e197c7149cefe62fe83 ffffffffffffffffffffffffffffffff 578 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
+00000000000000000000000000000000 15b603bc5c5cc3422f43c6f9bb8b4dc7 ffffffffffffffffffffffffffffffff 4880 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/bg-dark.png
 00000000000000000000000000000000 61075ae707f1cd6f5b636a07b172a56b ffffffffffffffffffffffffffffffff 102 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app.dSYM
-d3f10df2a3f7dd675c0d8ca298dccaac 234d3c3403e96e197c7149cefe62fe83 ffffffffffffffffffffffffffffffff 578 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app
-6c60542ea660806336f32c512f39a9b7 478bf0b29e0155219e9c481571178c17 ffffffffffffffffffffffffffffffff 54716 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
-353aed347e7c5f27aaedf8742829f571 a577eb5a91176f02728f63896e27932b ffffffffffffffffffffffffffffffff 70352 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/IdeasAppDelegate.o
+6c60542ea6608a6a36f32c512f39a9b7 478bf0b29e0155219e9c481571178c17 ffffffffffffffffffffffffffffffff 54716 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas
+353aed347e7c552eaaedf8742829f571 a577eb5a91176f02728f63896e27932b ffffffffffffffffffffffffffffffff 70352 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/IdeasAppDelegate.o
 353aed347e4772c2aaedf8742829caef 297022ed72d7e793172213f07032b6a9 ffffffffffffffffffffffffffffffff 42660 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/ApplicationHelper.o
 353aed343366c4d3aaedf8742829cbff 919bf4042d228de7504c35a991dcb345 ffffffffffffffffffffffffffffffff 56984 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/IdeaDetailViewController.o
 353aed3433655354aaedf8742829fb15 8f05f22e2244857f3274ea5f1a059232 ffffffffffffffffffffffffffffffff 95764 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Ideas.build/Debug-iphonesimulator/Ideas.build/Objects-normal/i386/RootViewController.o
@@ -9,7 +10,6 @@ d3f10df2a3f7dd675c0d8ca298dccaac 234d3c3403e96e197c7149cefe62fe83 ffffffffffffff
 000000004d206ca80000000000000088 9531f7ec189756a313ac5cd9a0565862 ffffffffffffffffffffffffffffffff 136 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Ideas.momd
 000000004d6a843a000000000000012e 353aed347fecd4d6aaedf8742829dc85 ffffffffffffffffffffffffffffffff 16326640 /var/folders/vE/vEM6MQM5FV4bvJhzsHVLsE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Ideas_Prefix-bwjbeklfosmfcmdogpxihsvmtmuo/Ideas_Prefix.pch.gch
 00000000000000000000000000000000 b1ddc78228c80b26f5b12130dd0312e6 ffffffffffffffffffffffffffffffff 5054 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/bg-selected.png
-00000000000000000000000000000000 15b603bc5c5cc3422f43c6f9bb8b4dc7 ffffffffffffffffffffffffffffffff 5989 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/bg-dark.png
 00000000000000000000000000000000 7a9852d13efe4cd7034b0ea24acf6b17 ffffffffffffffffffffffffffffffff 5990 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/bg-light.png
 00000000000000000000000000000000 ad328174e250f4d31a5b1c4832707cd1 ffffffffffffffffffffffffffffffff 103766 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/iTunesArtwork.png
 00000000000000000000000000000000 0a763defeb054600e0d983809d98da5b ffffffffffffffffffffffffffffffff 218755 /Users/oscardelben/projects/cocoa/apps/Ideas/build/Debug-iphonesimulator/Ideas.app/Default.png
