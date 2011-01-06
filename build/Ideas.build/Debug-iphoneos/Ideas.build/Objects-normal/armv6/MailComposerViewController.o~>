@@ -1,0 +1,16 @@
+/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/MailComposerViewController.m: In function '-[MailComposerViewController displayComposerSheet]':
+/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/MailComposerViewController.m:49: error: expected ']' before ';' token
+/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/MailComposerViewController.m:62: error: expected ';' before '}' token
+{standard input}:143:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L12"
+{standard input}:143:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:142:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L10"
+{standard input}:142:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:141:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L8"
+{standard input}:141:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+{standard input}:140:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L5"
+{standard input}:140:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+{standard input}:unknown:Undefined local symbol L_NSClassFromString$stub
+{standard input}:unknown:Undefined local symbol L_objc_msgSend$stub
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2

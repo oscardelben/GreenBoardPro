@@ -8,13 +8,19 @@
 
 #import "RootViewController.h"
 #import "IdeaDetailViewController.h"
+#import "SettingsViewController.h"
+#import "MailComposerViewController.h"
+#import "Idea.h"
 #import "ApplicationHelper.h"
 
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)editCurrentObject:(id)sender;
-- (void)showDetailView:(NSManagedObject *)aObject newIdea:(BOOL)newIdea;
+- (void)showDetailView:(Idea *)aObject newIdea:(BOOL)newIdea;
+- (void)showMailView;
+- (void)showSettingsView;
+- (void)configureTheme;
 @end
 
 
@@ -23,6 +29,7 @@
 @synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_;
 
 @synthesize selectedIdea;
+@synthesize mailComposerViewController;
 
 
 #pragma mark -
@@ -33,6 +40,11 @@
     [super viewDidLoad];
 	
 	[self updateTitle];
+	
+	if (mailComposerViewController == nil) {
+		mailComposerViewController = [[MailComposerViewController alloc] init];
+		mailComposerViewController.rootViewController = self;
+	}
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] 
 								  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
@@ -40,10 +52,24 @@
 								  action:@selector(insertNewObject)];
 	
     self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
+	[addButton release];
+
+	if (!selectedIdea) {
+		UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] 
+										  initWithTitle:@"Settings"
+										  style:UIBarButtonItemStyleBordered
+										  target:self 
+										  action:@selector(showSettingsView)];
+		
+		self.navigationItem.leftBarButtonItem = optionsButton;
+		
+		[optionsButton release];
+	}
+	
 	
 	self.tableView.backgroundColor = [UIColor clearColor]; // Display image under the view
 	
+	// TODO separator color
 	self.tableView.separatorColor = [UIColor colorWithRed:34/255.0 green:76/255.0 blue:72/255.0 alpha:1];
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	
@@ -57,31 +83,39 @@
 										  action:nil];
 		
 		UIBarButtonItem *editItem = [[UIBarButtonItem alloc] 
-									 initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+									 initWithImage:[UIImage imageNamed:@"187-pencil.png"]
+									 style:UIBarButtonSystemItemReply
 									 target:self 
 									 action:@selector(editCurrentObject:)];
 		UIBarButtonItem *deleteItem = [[UIBarButtonItem alloc] 
 									 initWithBarButtonSystemItem:UIBarButtonSystemItemTrash 
 									 target:self 
 									 action:@selector(showDeleteConfirmation:)];
-		UIBarButtonItem *exportItem = [[UIBarButtonItem alloc] 
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+		UIBarButtonItem *mailItem = [[UIBarButtonItem alloc] 
+									   initWithImage:[UIImage imageNamed:@"18-envelope.png"]
+									   style:UIBarButtonSystemItemReply
 									   target:self 
-									   action:nil];
+									   action:@selector(showMailView)];
 		
 		self.toolbarItems = [NSArray arrayWithObjects:
 							 flexibleSPace, 
 							 editItem, 
 							 flexibleSPace, 
-							 exportItem, 
+							 mailItem, 
 							 flexibleSPace, 
 							 deleteItem, 
 							 flexibleSPace, 
 							 nil];
+		
+		[flexibleSPace release];
+		[editItem release];
+		[mailItem release];
+		[deleteItem release];
 	} else {
 		self.navigationController.toolbarHidden = YES;
 	}
 
+	[self configureTheme];
 }
 
 
@@ -95,7 +129,6 @@
 	} else {
 		[self.navigationController setToolbarHidden:YES animated:YES];
 	}
-
 }
 
 
@@ -132,11 +165,31 @@
 	}
 }
 
+- (void)configureTheme
+{
+	NSDictionary *theme = [ApplicationHelper theme];
+	
+	int r = [[theme objectForKey:@"red"] intValue];
+	int g = [[theme objectForKey:@"green"] intValue];
+	int b = [[theme objectForKey:@"blue"] intValue];
+	
+    // Override point for customization after application launch.
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+	self.navigationController.toolbar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+	
+	self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"background"]]];
+	
+	// This should be done only when the theme changed
+	[self.tableView reloadData];
+}
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	NSDictionary *theme = [ApplicationHelper theme];
+	
+    Idea *idea = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.textLabel.text = [managedObject valueForKey:@"name"];
+	cell.textLabel.text = [idea valueForKey:@"name"];
 	cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
 	
 	cell.accessoryType = UIButtonTypeRoundedRect;
@@ -144,11 +197,14 @@
 	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
 	cell.textLabel.numberOfLines = 0;
 	
-	cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-light.png"]];
-	
+	cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"foreground"]]];
+
+
+	/*
 	UIView *selectedView = [[[UIView alloc] init] autorelease];
-	selectedView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-selected.png"]];
+	selectedView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"selected"]]];
 	cell.selectedBackgroundView = selectedView;
+	*/
 }
 
 - (void)showDeleteConfirmation:(id)sender
@@ -160,7 +216,7 @@
 								  destructiveButtonTitle:@"Confirm" 
 								  otherButtonTitles:nil];
 	
-	[actionSheet showInView:self.view];
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
 	
 	[actionSheet release];
 }
@@ -170,7 +226,7 @@
 	[self showDetailView:selectedIdea newIdea:FALSE];
 }
 
-- (void)showDetailView:(NSManagedObject *)aObject newIdea:(BOOL)newIdea
+- (void)showDetailView:(Idea *)aObject newIdea:(BOOL)newIdea
 {
 	IdeaDetailViewController *detailViewController = [[IdeaDetailViewController alloc] initWithNibName:@"IdeaDetailViewController" bundle:nil];
 	detailViewController.idea = aObject;
@@ -185,9 +241,33 @@
 	[navigationController release];
 }
 
+- (void)showMailView
+{
+	mailComposerViewController.idea = selectedIdea;
+	[mailComposerViewController showPicker];
+}
+
+- (void)showSettingsView
+{
+	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+	settingsViewController.rootViewController = self;
+	
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+	
+	[self presentModalViewController:navigationController animated:YES];
+	
+	[settingsViewController release];
+	[navigationController release];
+}
+
+- (void)reloadTheme
+{
+	[self configureTheme];
+}
+
 #pragma mark - IdeaDetailDelegate
 
-- (void)ideaDetailViewController:(IdeaDetailViewController *)ideaDetailViewController didSaveIdea:(NSManagedObject *)idea
+- (void)ideaDetailViewController:(IdeaDetailViewController *)ideaDetailViewController didSaveIdea:(Idea *)idea
 {
 	[self.tableView reloadData];
 	[self updateTitle];
@@ -219,18 +299,18 @@
 
 
 - (void)insertNewObject {
-	NSManagedObject *newManagedObject = [NSEntityDescription 
+	Idea *newIdea = [NSEntityDescription 
 										 insertNewObjectForEntityForName:@"Idea" 
 										 inManagedObjectContext:self.managedObjectContext];
 	
 	
-	[newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+	[newIdea setValue:[NSDate date] forKey:@"timeStamp"];
 	
 	if (selectedIdea) {
-		[newManagedObject setValue:selectedIdea forKey:@"parent"];
+		[newIdea setValue:selectedIdea forKey:@"parent"];
 	}
 	
-	[self showDetailView:newManagedObject newIdea:YES];
+	[self showDetailView:newIdea newIdea:YES];
 }
 
 - (void)deleteCurrentObject
@@ -315,8 +395,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	NSString *cellText = [managedObject valueForKey:@"name"];
+	Idea *idea = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	NSString *cellText = [idea valueForKey:@"name"];
 	
 	UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
@@ -333,8 +413,8 @@
 	RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
 	rootViewController.managedObjectContext = self.managedObjectContext;
 	
-	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	rootViewController.selectedIdea = managedObject;
+	Idea *idea = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	rootViewController.selectedIdea = idea;
 	
 	[self.navigationController pushViewController:rootViewController animated:YES];
 	[rootViewController release];
@@ -499,6 +579,7 @@
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
 	[selectedIdea release];
+	[mailComposerViewController release];
     [super dealloc];
 }
 

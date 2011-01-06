@@ -10,9 +10,13 @@
 #import <CoreData/CoreData.h>
 #import "IdeaDetailViewController.h"
 
+@class MailComposerViewController;
+@class Idea;
+
 @interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, IdeaDetailDelegate> {
 	
-	NSManagedObject *selectedIdea;
+	Idea *selectedIdea;
+	MailComposerViewController *mailComposerViewController;
 
 @private
     NSFetchedResultsController *fetchedResultsController_;
@@ -22,11 +26,13 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, retain) NSManagedObject *selectedIdea;
+@property (nonatomic, retain) Idea *selectedIdea;
+@property (nonatomic, retain) MailComposerViewController *mailComposerViewController;
 
 
 - (void)showDeleteConfirmation:(id)sender;
 - (void)deleteCurrentObject;
 - (void)updateTitle;
+- (void)reloadTheme;
 
 @end

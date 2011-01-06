@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>18-envelope.png</key>
+		<data>
+		5lJuxmA0s22Ox4dhEQNtBCgLPdA=
+		</data>
+		<key>187-pencil.png</key>
+		<data>
+		pKqUjXyiK4vdxZ2KRWjjKFISxq4=
+		</data>
 		<key>Default.png</key>
 		<data>
 		N0iPfj/E9xkhUwesUekQjId99hU=
@@ -18,7 +26,7 @@
 		</data>
 		<key>Ideas.momd/Ideas.mom</key>
 		<data>
-		gA++MinKh+OXgy0sDfWXyCzVDY8=
+		//HviF3gVmhmJTRUzAgSsoKEWR8=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
@@ -32,9 +40,29 @@
 		<data>
 		mPs6oa0JCWi1/N+kNiU9h+YO2zQ=
 		</data>
+		<key>SettingsViewController.nib</key>
+		<data>
+		mQkN4ZUGV5wmzIjl8//iBPUQsns=
+		</data>
+		<key>bg-blue.png</key>
+		<data>
+		00oBegYID7cNNzUU6Jl1qojL0mk=
+		</data>
 		<key>bg-dark.png</key>
 		<data>
 		uGq5xFQFScA20oQYrGbEWqQTPtI=
+		</data>
+		<key>bg-green-dark.png</key>
+		<data>
+		47n/mfZnn/WsF6z+n8lJdsjVk/E=
+		</data>
+		<key>bg-green-light.png</key>
+		<data>
+		H6oAPH0+diZ3e0b3sI72wWSYU/A=
+		</data>
+		<key>bg-green-middle.png</key>
+		<data>
+		3vZCc4XZEIy+cME4xwoaZbbMs/Y=
 		</data>
 		<key>bg-light.png</key>
 		<data>
@@ -43,6 +71,14 @@
 		<key>bg-selected.png</key>
 		<data>
 		3vZCc4XZEIy+cME4xwoaZbbMs/Y=
+		</data>
+		<key>bg-white.png</key>
+		<data>
+		uGq5xFQFScA20oQYrGbEWqQTPtI=
+		</data>
+		<key>bg-yellow.png</key>
+		<data>
+		ltwSE9DEiszC75zbPiPZVC9VqzE=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>

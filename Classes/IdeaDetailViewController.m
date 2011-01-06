@@ -8,6 +8,7 @@
 
 #import "IdeaDetailViewController.h"
 #import "RootViewController.h"
+#import "Idea.h"
 #import "ApplicationHelper.h"
 
 
@@ -43,6 +44,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	NSDictionary *theme = [ApplicationHelper theme];
+	
 	// Configure the navigation bar
     self.navigationItem.title = @"Add Entry";
     
@@ -54,9 +57,13 @@
     self.navigationItem.rightBarButtonItem = saveButtonItem;
     [saveButtonItem release];
 	
-	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:53/255.0 green:161/255.0 blue:95/255.0 alpha:1];
+	int r = [[theme objectForKey:@"red"] intValue];
+	int g = [[theme objectForKey:@"green"] intValue];
+	int b = [[theme objectForKey:@"blue"] intValue];
 	
-	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-dark.png"]]];
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+	
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"background"]]]];
 	
 	[name becomeFirstResponder];
 }

@@ -16,5 +16,9 @@
 + (void)showApplicationError;
 
 + (NSDictionary *)themes;
++ (NSDictionary *)theme;
++ (void)saveTheme:(NSString *)themeID;
+
++ (NSString *)recipient;
 
 @end
