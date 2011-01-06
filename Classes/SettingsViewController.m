@@ -8,7 +8,6 @@
 
 #import "SettingsViewController.h"
 #import "RootViewController.h"
-#import "TextFieldCell.h"
 #import "ApplicationHelper.h"
 
 @interface SettingsViewController(PrivateMethods)
@@ -51,36 +50,32 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
-*/
 
 
-- (UITableViewCell *)themeCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+#pragma mark -
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{	
+	return [[ApplicationHelper themes] count];
+}
+
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	static NSString *CellIdentifier = @"ThemeCell";
     
@@ -111,73 +106,9 @@
     return cell;
 }
 
-
-- (UITableViewCell *)emailCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
-{
-	static NSString *CellIdentifier = @"EmailCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Configure the cell...
-	cell.textLabel.text = @"Email";
-	
-    return cell;
-}
-
-
-#pragma mark -
-#pragma mark Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 2;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{	
-	switch (section) {
-		case 0:
-			return [[ApplicationHelper themes] count];
-			break;
-		case 1:
-			return 1;
-			break;
-	}
-	return 0;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	switch (indexPath.section) {
-		case 0:
-			return [self themeCellForTableView:tableView atIndexPath:(indexPath)];
-			break;
-		case 1:
-			return [self emailCellForTableView:tableView atIndexPath:(indexPath)];
-			break;
-	}
-	
-	return nil;
-}
-
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	switch (section) {
-		case 0:
-			return @"Theme";
-			break;
-		case 1:
-			return @"Default Email";
-			break;
-	}
-
-	return nil;
+	return @"Theme";
 }
 
 #pragma mark -
@@ -185,24 +116,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	/*
-	switch (indexPath.section) {
-		case 0:
-			NSString *themeID = [NSString stringWithFormat:@"theme%d", indexPath.row+1];
-			
-			[ApplicationHelper saveTheme:themeID];
-			
-			[rootViewController reloadTheme];
-			
-			[self dismiss];
-			break;
-		case 1:
-			[tableView cellForRowAtIndexPath:indexPath]
-			break;
-:
-			break;
-	}
-	*/
+
+	NSString *themeID = [NSString stringWithFormat:@"theme%d", indexPath.row+1];
+	
+	[ApplicationHelper saveTheme:themeID];
+	
+	[rootViewController reloadTheme];
+	
+	[self dismiss];
 }
 
 

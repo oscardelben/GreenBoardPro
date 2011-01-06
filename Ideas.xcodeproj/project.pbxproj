@@ -23,18 +23,16 @@
 		BF4F7CC012D0A22E007CB6E2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CBF12D0A22E007CB6E2 /* Icon.png */; };
 		BF4F7CE712D0A80A007CB6E2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CE612D0A80A007CB6E2 /* Default.png */; };
 		BF4F7CF112D0C53D007CB6E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */; };
-		BF8526F912D5BA7000306911 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8526F812D5BA7000306911 /* TextFieldCell.m */; };
-		BF8526FB12D5BA9800306911 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8526FA12D5BA9800306911 /* TextFieldCell.xib */; };
-		BF85276812D5FBF300306911 /* LICENSE AGREEMENT.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF85275512D5FBF300306911 /* LICENSE AGREEMENT.rtf */; };
-		BF85276912D5FBF300306911 /* SCBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85275712D5FBF300306911 /* SCBadgeView.m */; };
-		BF85276A12D5FBF300306911 /* SCClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85275912D5FBF300306911 /* SCClassDefinition.m */; };
-		BF85276B12D5FBF300306911 /* SCGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85275B12D5FBF300306911 /* SCGlobals.m */; };
-		BF85276C12D5FBF300306911 /* SCPropertyAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85275D12D5FBF300306911 /* SCPropertyAttributes.m */; };
-		BF85276D12D5FBF300306911 /* SCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85275F12D5FBF300306911 /* SCTableViewCell.m */; };
-		BF85276E12D5FBF300306911 /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85276112D5FBF300306911 /* SCTableViewController.m */; };
-		BF85276F12D5FBF300306911 /* SCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85276312D5FBF300306911 /* SCTableViewModel.m */; };
-		BF85277012D5FBF300306911 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85276512D5FBF300306911 /* SCTableViewSection.m */; };
-		BF85277112D5FBF300306911 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85276712D5FBF300306911 /* SCViewController.m */; };
+		BF85282412D6176A00306911 /* LICENSE AGREEMENT.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF85281112D6176A00306911 /* LICENSE AGREEMENT.rtf */; };
+		BF85282512D6176A00306911 /* SCBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281312D6176A00306911 /* SCBadgeView.m */; };
+		BF85282612D6176A00306911 /* SCClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281512D6176A00306911 /* SCClassDefinition.m */; };
+		BF85282712D6176A00306911 /* SCGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281712D6176A00306911 /* SCGlobals.m */; };
+		BF85282812D6176A00306911 /* SCPropertyAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281912D6176A00306911 /* SCPropertyAttributes.m */; };
+		BF85282912D6176A00306911 /* SCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281B12D6176A00306911 /* SCTableViewCell.m */; };
+		BF85282A12D6176A00306911 /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281D12D6176A00306911 /* SCTableViewController.m */; };
+		BF85282B12D6176A00306911 /* SCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281F12D6176A00306911 /* SCTableViewModel.m */; };
+		BF85282C12D6176A00306911 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282112D6176A00306911 /* SCTableViewSection.m */; };
+		BF85282D12D6176A00306911 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282312D6176A00306911 /* SCViewController.m */; };
 		BF996EDC12D338CD00916A41 /* bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996ED912D338CD00916A41 /* bg-white.png */; };
 		BF996EDD12D338CD00916A41 /* bg-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDA12D338CD00916A41 /* bg-yellow.png */; };
 		BF996EDE12D338CD00916A41 /* bg-green-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDB12D338CD00916A41 /* bg-green-middle.png */; };
@@ -75,28 +73,25 @@
 		BF4F7CBF12D0A22E007CB6E2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BF4F7CE612D0A80A007CB6E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		BF8526F712D5BA7000306911 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
-		BF8526F812D5BA7000306911 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
-		BF8526FA12D5BA9800306911 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
-		BF85275512D5FBF300306911 /* LICENSE AGREEMENT.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "LICENSE AGREEMENT.rtf"; sourceTree = "<group>"; };
-		BF85275612D5FBF300306911 /* SCBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBadgeView.h; sourceTree = "<group>"; };
-		BF85275712D5FBF300306911 /* SCBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBadgeView.m; sourceTree = "<group>"; };
-		BF85275812D5FBF300306911 /* SCClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCClassDefinition.h; sourceTree = "<group>"; };
-		BF85275912D5FBF300306911 /* SCClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCClassDefinition.m; sourceTree = "<group>"; };
-		BF85275A12D5FBF300306911 /* SCGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGlobals.h; sourceTree = "<group>"; };
-		BF85275B12D5FBF300306911 /* SCGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGlobals.m; sourceTree = "<group>"; };
-		BF85275C12D5FBF300306911 /* SCPropertyAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPropertyAttributes.h; sourceTree = "<group>"; };
-		BF85275D12D5FBF300306911 /* SCPropertyAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPropertyAttributes.m; sourceTree = "<group>"; };
-		BF85275E12D5FBF300306911 /* SCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewCell.h; sourceTree = "<group>"; };
-		BF85275F12D5FBF300306911 /* SCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewCell.m; sourceTree = "<group>"; };
-		BF85276012D5FBF300306911 /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
-		BF85276112D5FBF300306911 /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
-		BF85276212D5FBF300306911 /* SCTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewModel.h; sourceTree = "<group>"; };
-		BF85276312D5FBF300306911 /* SCTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewModel.m; sourceTree = "<group>"; };
-		BF85276412D5FBF300306911 /* SCTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewSection.h; sourceTree = "<group>"; };
-		BF85276512D5FBF300306911 /* SCTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewSection.m; sourceTree = "<group>"; };
-		BF85276612D5FBF300306911 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
-		BF85276712D5FBF300306911 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		BF85281112D6176A00306911 /* LICENSE AGREEMENT.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "LICENSE AGREEMENT.rtf"; sourceTree = "<group>"; };
+		BF85281212D6176A00306911 /* SCBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBadgeView.h; sourceTree = "<group>"; };
+		BF85281312D6176A00306911 /* SCBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBadgeView.m; sourceTree = "<group>"; };
+		BF85281412D6176A00306911 /* SCClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCClassDefinition.h; sourceTree = "<group>"; };
+		BF85281512D6176A00306911 /* SCClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCClassDefinition.m; sourceTree = "<group>"; };
+		BF85281612D6176A00306911 /* SCGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGlobals.h; sourceTree = "<group>"; };
+		BF85281712D6176A00306911 /* SCGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGlobals.m; sourceTree = "<group>"; };
+		BF85281812D6176A00306911 /* SCPropertyAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPropertyAttributes.h; sourceTree = "<group>"; };
+		BF85281912D6176A00306911 /* SCPropertyAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPropertyAttributes.m; sourceTree = "<group>"; };
+		BF85281A12D6176A00306911 /* SCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewCell.h; sourceTree = "<group>"; };
+		BF85281B12D6176A00306911 /* SCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewCell.m; sourceTree = "<group>"; };
+		BF85281C12D6176A00306911 /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
+		BF85281D12D6176A00306911 /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
+		BF85281E12D6176A00306911 /* SCTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewModel.h; sourceTree = "<group>"; };
+		BF85281F12D6176A00306911 /* SCTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewModel.m; sourceTree = "<group>"; };
+		BF85282012D6176A00306911 /* SCTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewSection.h; sourceTree = "<group>"; };
+		BF85282112D6176A00306911 /* SCTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewSection.m; sourceTree = "<group>"; };
+		BF85282212D6176A00306911 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		BF85282312D6176A00306911 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
 		BF996ED912D338CD00916A41 /* bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-white.png"; sourceTree = "<group>"; };
 		BF996EDA12D338CD00916A41 /* bg-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yellow.png"; sourceTree = "<group>"; };
 		BF996EDB12D338CD00916A41 /* bg-green-middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-middle.png"; sourceTree = "<group>"; };
@@ -134,8 +129,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BF85275412D5FBF300306911 /* Sensible TableView */,
-				BF8526F612D5BA4C00306911 /* Views */,
+				BF85281012D6176A00306911 /* Sensible TableView */,
 				BFB50BF212D4D37C00D8EBE3 /* Models */,
 				BFB50BF112D4CF1500D8EBE3 /* Controllers */,
 				BFB50BF012D4CEFE00D8EBE3 /* Helpers */,
@@ -189,7 +183,6 @@
 				BF996FB612D477C600916A41 /* SettingsViewController.xib */,
 				BF12F6BF12CF66B800159AE4 /* IdeaDetailViewController.xib */,
 				8D1107310486CEB800E47090 /* Ideas-Info.plist */,
-				BF8526FA12D5BA9800306911 /* TextFieldCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -205,37 +198,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF8526F612D5BA4C00306911 /* Views */ = {
+		BF85281012D6176A00306911 /* Sensible TableView */ = {
 			isa = PBXGroup;
 			children = (
-				BF8526F712D5BA7000306911 /* TextFieldCell.h */,
-				BF8526F812D5BA7000306911 /* TextFieldCell.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		BF85275412D5FBF300306911 /* Sensible TableView */ = {
-			isa = PBXGroup;
-			children = (
-				BF85275512D5FBF300306911 /* LICENSE AGREEMENT.rtf */,
-				BF85275612D5FBF300306911 /* SCBadgeView.h */,
-				BF85275712D5FBF300306911 /* SCBadgeView.m */,
-				BF85275812D5FBF300306911 /* SCClassDefinition.h */,
-				BF85275912D5FBF300306911 /* SCClassDefinition.m */,
-				BF85275A12D5FBF300306911 /* SCGlobals.h */,
-				BF85275B12D5FBF300306911 /* SCGlobals.m */,
-				BF85275C12D5FBF300306911 /* SCPropertyAttributes.h */,
-				BF85275D12D5FBF300306911 /* SCPropertyAttributes.m */,
-				BF85275E12D5FBF300306911 /* SCTableViewCell.h */,
-				BF85275F12D5FBF300306911 /* SCTableViewCell.m */,
-				BF85276012D5FBF300306911 /* SCTableViewController.h */,
-				BF85276112D5FBF300306911 /* SCTableViewController.m */,
-				BF85276212D5FBF300306911 /* SCTableViewModel.h */,
-				BF85276312D5FBF300306911 /* SCTableViewModel.m */,
-				BF85276412D5FBF300306911 /* SCTableViewSection.h */,
-				BF85276512D5FBF300306911 /* SCTableViewSection.m */,
-				BF85276612D5FBF300306911 /* SCViewController.h */,
-				BF85276712D5FBF300306911 /* SCViewController.m */,
+				BF85281112D6176A00306911 /* LICENSE AGREEMENT.rtf */,
+				BF85281212D6176A00306911 /* SCBadgeView.h */,
+				BF85281312D6176A00306911 /* SCBadgeView.m */,
+				BF85281412D6176A00306911 /* SCClassDefinition.h */,
+				BF85281512D6176A00306911 /* SCClassDefinition.m */,
+				BF85281612D6176A00306911 /* SCGlobals.h */,
+				BF85281712D6176A00306911 /* SCGlobals.m */,
+				BF85281812D6176A00306911 /* SCPropertyAttributes.h */,
+				BF85281912D6176A00306911 /* SCPropertyAttributes.m */,
+				BF85281A12D6176A00306911 /* SCTableViewCell.h */,
+				BF85281B12D6176A00306911 /* SCTableViewCell.m */,
+				BF85281C12D6176A00306911 /* SCTableViewController.h */,
+				BF85281D12D6176A00306911 /* SCTableViewController.m */,
+				BF85281E12D6176A00306911 /* SCTableViewModel.h */,
+				BF85281F12D6176A00306911 /* SCTableViewModel.m */,
+				BF85282012D6176A00306911 /* SCTableViewSection.h */,
+				BF85282112D6176A00306911 /* SCTableViewSection.m */,
+				BF85282212D6176A00306911 /* SCViewController.h */,
+				BF85282312D6176A00306911 /* SCViewController.m */,
 			);
 			path = "Sensible TableView";
 			sourceTree = "<group>";
@@ -353,8 +337,7 @@
 				BF996F8512D3562000916A41 /* 18-envelope.png in Resources */,
 				BF996F8F12D3572400916A41 /* 187-pencil.png in Resources */,
 				BF996FB812D477C600916A41 /* SettingsViewController.xib in Resources */,
-				BF8526FB12D5BA9800306911 /* TextFieldCell.xib in Resources */,
-				BF85276812D5FBF300306911 /* LICENSE AGREEMENT.rtf in Resources */,
+				BF85282412D6176A00306911 /* LICENSE AGREEMENT.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,16 +357,15 @@
 				BF996FB712D477C600916A41 /* SettingsViewController.m in Sources */,
 				BFB50BB412D4C6BF00D8EBE3 /* MailComposerViewController.m in Sources */,
 				BFB50C7012D5308000D8EBE3 /* Idea.m in Sources */,
-				BF8526F912D5BA7000306911 /* TextFieldCell.m in Sources */,
-				BF85276912D5FBF300306911 /* SCBadgeView.m in Sources */,
-				BF85276A12D5FBF300306911 /* SCClassDefinition.m in Sources */,
-				BF85276B12D5FBF300306911 /* SCGlobals.m in Sources */,
-				BF85276C12D5FBF300306911 /* SCPropertyAttributes.m in Sources */,
-				BF85276D12D5FBF300306911 /* SCTableViewCell.m in Sources */,
-				BF85276E12D5FBF300306911 /* SCTableViewController.m in Sources */,
-				BF85276F12D5FBF300306911 /* SCTableViewModel.m in Sources */,
-				BF85277012D5FBF300306911 /* SCTableViewSection.m in Sources */,
-				BF85277112D5FBF300306911 /* SCViewController.m in Sources */,
+				BF85282512D6176A00306911 /* SCBadgeView.m in Sources */,
+				BF85282612D6176A00306911 /* SCClassDefinition.m in Sources */,
+				BF85282712D6176A00306911 /* SCGlobals.m in Sources */,
+				BF85282812D6176A00306911 /* SCPropertyAttributes.m in Sources */,
+				BF85282912D6176A00306911 /* SCTableViewCell.m in Sources */,
+				BF85282A12D6176A00306911 /* SCTableViewController.m in Sources */,
+				BF85282B12D6176A00306911 /* SCTableViewModel.m in Sources */,
+				BF85282C12D6176A00306911 /* SCTableViewSection.m in Sources */,
+				BF85282D12D6176A00306911 /* SCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
