@@ -185,6 +185,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	/*
 	switch (indexPath.section) {
 		case 0:
 			NSString *themeID = [NSString stringWithFormat:@"theme%d", indexPath.row+1];
@@ -201,6 +202,7 @@
 :
 			break;
 	}
+	*/
 }
 
 

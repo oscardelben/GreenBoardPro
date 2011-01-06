@@ -1,2 +1,0 @@
-/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/TextFieldCell.m: In function '-[TextFieldCell initWithStyle:reuseIdentifier:]':
-/Users/oscardelben/projects/cocoa/apps/Ideas/Classes/TextFieldCell.m:20: warning: class 'TextFieldCell' does not implement the 'UITextFieldDelegate' protocol

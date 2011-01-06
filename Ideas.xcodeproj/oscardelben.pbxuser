@@ -315,6 +315,7 @@
 			BF85273112D5BF1400306911 /* XCBuildMessageTextBookmark */ = BF85273112D5BF1400306911 /* XCBuildMessageTextBookmark */;
 			BF85273212D5BF1400306911 /* PBXTextBookmark */ = BF85273212D5BF1400306911 /* PBXTextBookmark */;
 			BF85273612D5CB8D00306911 /* PBXTextBookmark */ = BF85273612D5CB8D00306911 /* PBXTextBookmark */;
+			BF85277C12D5FEB900306911 /* PBXTextBookmark */ = BF85277C12D5FEB900306911 /* PBXTextBookmark */;
 			BF996FBA12D477DA00916A41 = BF996FBA12D477DA00916A41 /* PBXBookmark */;
 			BF996FBB12D477DA00916A41 = BF996FBB12D477DA00916A41 /* PBXBookmark */;
 			BF996FC012D477DA00916A41 = BF996FC012D477DA00916A41 /* PBXTextBookmark */;
@@ -741,9 +742,19 @@
 		fRef = BF996FB512D477C600916A41 /* SettingsViewController.m */;
 		name = "SettingsViewController.m: 199";
 		rLen = 0;
-		rLoc = 5088;
+		rLoc = 5092;
 		rType = 0;
 		vrLen = 661;
+		vrLoc = 4675;
+	};
+	BF85277C12D5FEB900306911 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF996FB512D477C600916A41 /* SettingsViewController.m */;
+		name = "SettingsViewController.m: 205";
+		rLen = 0;
+		rLoc = 5164;
+		rType = 0;
+		vrLen = 575;
 		vrLoc = 4675;
 	};
 	BF996ED912D338CD00916A41 /* bg-white.png */ = {
@@ -770,9 +781,9 @@
 	};
 	BF996FB512D477C600916A41 /* SettingsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {726, 3029}}";
-			sepNavSelRange = "{4439, 0}";
-			sepNavVisRange = "{4350, 375}";
+			sepNavIntBoundsRect = "{{0, 0}, {1007, 3263}}";
+			sepNavSelRange = "{5164, 0}";
+			sepNavVisRange = "{4675, 575}";
 		};
 	};
 	BF996FBA12D477DA00916A41 /* PBXBookmark */ = {
