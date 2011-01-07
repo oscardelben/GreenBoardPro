@@ -162,7 +162,7 @@
 		self.navigationItem.title = [NSString stringWithFormat:@"%@%@",
 									 [selectedIdea valueForKey:@"name"], countText];
 	} else {
-		self.navigationItem.title = [NSString stringWithFormat:@"Ideas%@", countText];
+		self.navigationItem.title = [NSString stringWithFormat:@"Green Board%@", countText];
 	}
 }
 
