@@ -34,6 +34,7 @@
 		BF85282C12D6176A00306911 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282112D6176A00306911 /* SCTableViewSection.m */; };
 		BF85282D12D6176A00306911 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282312D6176A00306911 /* SCViewController.m */; };
 		BF916A9E12D71AFC00FE9252 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF916A9D12D71AFC00FE9252 /* libFlurry.a */; };
+		BF916AB112D7237400FE9252 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF916AB012D7237400FE9252 /* MainWindow-iPad.xib */; };
 		BF996EDC12D338CD00916A41 /* bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996ED912D338CD00916A41 /* bg-white.png */; };
 		BF996EDD12D338CD00916A41 /* bg-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDA12D338CD00916A41 /* bg-yellow.png */; };
 		BF996EDE12D338CD00916A41 /* bg-green-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDB12D338CD00916A41 /* bg-green-middle.png */; };
@@ -96,6 +97,7 @@
 		BF916A9B12D71AFC00FE9252 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
 		BF916A9C12D71AFC00FE9252 /* FlurryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAPI.h; sourceTree = "<group>"; };
 		BF916A9D12D71AFC00FE9252 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		BF916AB012D7237400FE9252 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		BF996ED912D338CD00916A41 /* bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-white.png"; sourceTree = "<group>"; };
 		BF996EDA12D338CD00916A41 /* bg-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yellow.png"; sourceTree = "<group>"; };
 		BF996EDB12D338CD00916A41 /* bg-green-middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-middle.png"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				BF916AAF12D7237300FE9252 /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				BF12F75C12CF9C1200159AE4 /* QuartzCore.framework */,
@@ -238,6 +241,14 @@
 				BF916A9D12D71AFC00FE9252 /* libFlurry.a */,
 			);
 			path = FlurryLib;
+			sourceTree = "<group>";
+		};
+		BF916AAF12D7237300FE9252 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				BF916AB012D7237400FE9252 /* MainWindow-iPad.xib */,
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		BF996ED312D337F600916A41 /* images */ = {
@@ -354,6 +365,7 @@
 				BF996F8F12D3572400916A41 /* 187-pencil.png in Resources */,
 				BF996FB812D477C600916A41 /* SettingsViewController.xib in Resources */,
 				BF85282412D6176A00306911 /* LICENSE AGREEMENT.rtf in Resources */,
+				BF916AB112D7237400FE9252 /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -403,6 +416,8 @@
 					"\"$(SRCROOT)/Classes/FlurryLib\"",
 				);
 				PRODUCT_NAME = Ideas;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -410,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Ideas_Prefix.pch;
@@ -419,6 +435,8 @@
 					"\"$(SRCROOT)/Classes/FlurryLib\"",
 				);
 				PRODUCT_NAME = Ideas;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

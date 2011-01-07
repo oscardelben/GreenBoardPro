@@ -178,8 +178,18 @@
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
 	self.navigationController.toolbar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
 	
-	self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"background"]]];
+	UIDevice *device = [UIDevice currentDevice];
 	
+	if ([device userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+		if ([self.tableView respondsToSelector:@selector(backgroundView)]) {
+			self.tableView.backgroundView = nil;
+			self.tableView.backgroundView = [[[UIView alloc] init] autorelease];
+			self.tableView.backgroundColor = [UIColor clearColor];
+		}
+	}
+	
+	self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[theme objectForKey:@"background"]]];
+		
 	// This should be done only when the theme changed
 	[self.tableView reloadData];
 }
