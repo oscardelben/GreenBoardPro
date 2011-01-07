@@ -9,12 +9,16 @@
 #import "IdeasAppDelegate.h"
 #import "RootViewController.h"
 #import "ApplicationHelper.h"
+#import "FlurryAPI.h"
 
 @implementation IdeasAppDelegate
 
 @synthesize window;
 @synthesize navigationController;
 
+void uncaughtExceptionHandler(NSException *exception) {
+    [FlurryAPI logError:@"Uncaught" message:@"Crash!" exception:exception];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -26,7 +30,11 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+	
+	[FlurryAPI startSession:@"TCI39H8WPXFP4EVYFNXR"];
+	
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

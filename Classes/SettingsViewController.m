@@ -20,7 +20,7 @@
 
 @implementation SettingsViewController
 
-@synthesize rootViewController;
+@synthesize delegate;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -121,7 +121,7 @@
 	
 	[ApplicationHelper saveTheme:themeID];
 	
-	[rootViewController reloadTheme];
+	[delegate reloadTheme];
 	
 	[self dismiss];
 }
@@ -144,7 +144,7 @@
 
 
 - (void)dealloc {
-	[rootViewController release];
+	[delegate release];
     [super dealloc];
 }
 

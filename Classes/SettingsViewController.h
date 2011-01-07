@@ -10,9 +10,16 @@
 @class RootViewController;
 
 @interface SettingsViewController : UITableViewController {
-	RootViewController *rootViewController;
+	id delegate;
 }
 
-@property (nonatomic, retain) RootViewController *rootViewController;
+@property (nonatomic, retain) id delegate;
+
+@end
+
+
+@protocol SettingsViewControllerDelegate <NSObject>
+
+- (void)didChangeTheme;
 
 @end

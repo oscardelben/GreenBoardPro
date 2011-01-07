@@ -7,12 +7,14 @@
 //
 
 #import "ApplicationHelper.h"
+#import "FlurryAPI.h"
 
 
 @implementation ApplicationHelper
 
 + (void)showApplicationError
 {
+	[FlurryAPI logEvent:@"CAUGHT_ERROR"];
 	
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
 													message:@"We experienced an error. Please quit the application by pressing the Home button." 

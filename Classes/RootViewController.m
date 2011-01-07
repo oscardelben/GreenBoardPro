@@ -12,6 +12,7 @@
 #import "MailComposerViewController.h"
 #import "Idea.h"
 #import "ApplicationHelper.h"
+#import "FlurryAPI.h"
 
 
 @interface RootViewController ()
@@ -250,7 +251,7 @@
 - (void)showSettingsView
 {
 	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
-	settingsViewController.rootViewController = self;
+	settingsViewController.delegate = self;
 	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
 	
@@ -259,6 +260,9 @@
 	[settingsViewController release];
 	[navigationController release];
 }
+
+#pragma mark -
+#pragma mark SettingsViewControllerDelegate methods
 
 - (void)reloadTheme
 {
@@ -299,6 +303,8 @@
 
 
 - (void)insertNewObject {
+	[FlurryAPI logEvent:@"INSERT_IDEA"];
+	
 	Idea *newIdea = [NSEntityDescription 
 										 insertNewObjectForEntityForName:@"Idea" 
 										 inManagedObjectContext:self.managedObjectContext];

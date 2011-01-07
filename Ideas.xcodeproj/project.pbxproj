@@ -33,6 +33,7 @@
 		BF85282B12D6176A00306911 /* SCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85281F12D6176A00306911 /* SCTableViewModel.m */; };
 		BF85282C12D6176A00306911 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282112D6176A00306911 /* SCTableViewSection.m */; };
 		BF85282D12D6176A00306911 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85282312D6176A00306911 /* SCViewController.m */; };
+		BF916A9E12D71AFC00FE9252 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF916A9D12D71AFC00FE9252 /* libFlurry.a */; };
 		BF996EDC12D338CD00916A41 /* bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996ED912D338CD00916A41 /* bg-white.png */; };
 		BF996EDD12D338CD00916A41 /* bg-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDA12D338CD00916A41 /* bg-yellow.png */; };
 		BF996EDE12D338CD00916A41 /* bg-green-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF996EDB12D338CD00916A41 /* bg-green-middle.png */; };
@@ -92,6 +93,9 @@
 		BF85282112D6176A00306911 /* SCTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewSection.m; sourceTree = "<group>"; };
 		BF85282212D6176A00306911 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
 		BF85282312D6176A00306911 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		BF916A9B12D71AFC00FE9252 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
+		BF916A9C12D71AFC00FE9252 /* FlurryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAPI.h; sourceTree = "<group>"; };
+		BF916A9D12D71AFC00FE9252 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		BF996ED912D338CD00916A41 /* bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-white.png"; sourceTree = "<group>"; };
 		BF996EDA12D338CD00916A41 /* bg-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yellow.png"; sourceTree = "<group>"; };
 		BF996EDB12D338CD00916A41 /* bg-green-middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green-middle.png"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
 				BFB50BA812D4C64800D8EBE3 /* MessageUI.framework in Frameworks */,
+				BF916A9E12D71AFC00FE9252 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +134,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF916A9A12D71AFC00FE9252 /* FlurryLib */,
 				BF85281012D6176A00306911 /* Sensible TableView */,
 				BFB50BF212D4D37C00D8EBE3 /* Models */,
 				BFB50BF112D4CF1500D8EBE3 /* Controllers */,
@@ -222,6 +228,16 @@
 				BF85282312D6176A00306911 /* SCViewController.m */,
 			);
 			path = "Sensible TableView";
+			sourceTree = "<group>";
+		};
+		BF916A9A12D71AFC00FE9252 /* FlurryLib */ = {
+			isa = PBXGroup;
+			children = (
+				BF916A9B12D71AFC00FE9252 /* FlurryAdDelegate.h */,
+				BF916A9C12D71AFC00FE9252 /* FlurryAPI.h */,
+				BF916A9D12D71AFC00FE9252 /* libFlurry.a */,
+			);
+			path = FlurryLib;
 			sourceTree = "<group>";
 		};
 		BF996ED312D337F600916A41 /* images */ = {
@@ -382,6 +398,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Ideas_Prefix.pch;
 				INFOPLIST_FILE = "Ideas-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes/FlurryLib\"",
+				);
 				PRODUCT_NAME = Ideas;
 			};
 			name = Debug;
@@ -394,6 +414,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Ideas_Prefix.pch;
 				INFOPLIST_FILE = "Ideas-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes/FlurryLib\"",
+				);
 				PRODUCT_NAME = Ideas;
 				VALIDATE_PRODUCT = YES;
 			};
