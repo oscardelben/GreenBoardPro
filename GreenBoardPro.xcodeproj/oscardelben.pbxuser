@@ -188,16 +188,16 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {951, 8073}}";
+			sepNavIntBoundsRect = "{{0, 0}, {951, 8034}}";
 			sepNavSelRange = "{4034, 0}";
-			sepNavVisRange = "{3750, 859}";
+			sepNavVisRange = "{3750, 769}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = BF55DF7412C88E6700689625 /* GreenBoardPro */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenBoardPro */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GreenBoardPro */,
@@ -277,10 +277,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 316101796;
-			PBXWorkspaceStateSaveDate = 316101796;
+			PBXPerProjectTemplateStateSaveDate = 316614626;
+			PBXWorkspaceStateSaveDate = 316614626;
 		};
 		perUserProjectItems = {
+			BF323B4912DF288900FEB740 /* PBXTextBookmark */ = BF323B4912DF288900FEB740 /* PBXTextBookmark */;
+			BF323B4A12DF288900FEB740 /* PlistBookmark */ = BF323B4A12DF288900FEB740 /* PlistBookmark */;
 			BF4F7CCC12D0A5D2007CB6E2 = BF4F7CCC12D0A5D2007CB6E2 /* PBXBookmark */;
 			BF4F7CFF12D0C8AA007CB6E2 = BF4F7CFF12D0C8AA007CB6E2 /* PBXBookmark */;
 			BF4F7D1412D0C9BE007CB6E2 = BF4F7D1412D0C9BE007CB6E2 /* PBXBookmark */;
@@ -344,7 +346,7 @@
 			BF916B3412D7506700FE9252 = BF916B3412D7506700FE9252 /* PBXTextBookmark */;
 			BF916B3512D7506700FE9252 = BF916B3512D7506700FE9252 /* PBXTextBookmark */;
 			BF916B3A12D753E500FE9252 = BF916B3A12D753E500FE9252 /* PBXTextBookmark */;
-			BF916B4712D754A900FE9252 /* PBXTextBookmark */ = BF916B4712D754A900FE9252 /* PBXTextBookmark */;
+			BF916B4712D754A900FE9252 = BF916B4712D754A900FE9252 /* PBXTextBookmark */;
 			BF996FBA12D477DA00916A41 = BF996FBA12D477DA00916A41 /* PBXBookmark */;
 			BF996FBB12D477DA00916A41 = BF996FBB12D477DA00916A41 /* PBXBookmark */;
 			BF996FC012D477DA00916A41 = BF996FC012D477DA00916A41 /* PBXTextBookmark */;
@@ -374,6 +376,28 @@
 			sepNavVisRange = "{2629, 752}";
 		};
 	};
+	BF323B4912DF288900FEB740 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 141";
+		rLen = 0;
+		rLoc = 4034;
+		rType = 0;
+		vrLen = 769;
+		vrLoc = 3750;
+	};
+	BF323B4A12DF288900FEB740 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenBoardPro-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleName,
+		);
+		name = "/Users/oscardelben/projects/cocoa/apps/GreenBoardPro/code/GreenBoardPro-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	BF4F7C0B12D07241007CB6E2 /* ApplicationHelper.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1007, 442}}";
@@ -391,6 +415,13 @@
 	BF4F7CCC12D0A5D2007CB6E2 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = BF4F7CBF12D0A22E007CB6E2 /* Icon.png */;
+	};
+	BF4F7CE612D0A80A007CB6E2 /* Default.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = Default.png;
+		path = /Users/oscardelben/projects/cocoa/apps/GreenBoardPro/code/Default.png;
+		sourceTree = "<absolute>";
 	};
 	BF4F7CFF12D0C8AA007CB6E2 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -645,6 +676,12 @@
 		vrLoc = 7312;
 	};
 	BF916A9B12D71AFC00FE9252 /* FlurryAdDelegate.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = FlurryAdDelegate.h;
+		path = /Users/oscardelben/projects/cocoa/apps/GreenBoardPro/code/Classes/FlurryLib/FlurryAdDelegate.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {951, 455}}";
 			sepNavSelRange = "{0, 0}";
@@ -652,6 +689,12 @@
 		};
 	};
 	BF916A9C12D71AFC00FE9252 /* FlurryAPI.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = FlurryAPI.h;
+		path = /Users/oscardelben/projects/cocoa/apps/GreenBoardPro/code/Classes/FlurryLib/FlurryAPI.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1825, 1209}}";
 			sepNavSelRange = "{0, 0}";
