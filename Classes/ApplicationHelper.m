@@ -12,6 +12,9 @@
 
 @implementation ApplicationHelper
 
+#pragma mark -
+#pragma mark Errors
+
 + (void)showApplicationError
 {
 	[FlurryAPI logEvent:@"CAUGHT_ERROR"];
@@ -23,6 +26,9 @@
 	[alert show];
 	[alert release];
 }
+
+#pragma mark -
+#pragma mark Themes
 
 + (NSDictionary *)themes
 {
@@ -112,16 +118,36 @@
 	[userDefaults setObject:themeID forKey:@"themeID"];
 }
 
++ (UIColor *)navigationColor
+{
+	NSDictionary *theme = [self theme];
+	
+	int r = [[theme objectForKey:@"red"] intValue];
+	int g = [[theme objectForKey:@"green"] intValue];
+	int b = [[theme objectForKey:@"blue"] intValue];
+	
+	return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+}
+
+#pragma mark -
+#pragma mark Emails
+
 + (NSString *)recipient
 {
-	NSUserDefaults *useDefaults = [NSUserDefaults standardUserDefaults];
-	NSString *recipient = [useDefaults objectForKey:@"recipient"];
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	NSString *recipient = [userDefaults objectForKey:@"recipient"];
 	
 	if (recipient == nil) {
 		return @"";
 	} else {
 		return recipient;
 	}
+}
+
++ (void)setRecipient:(NSString *)recipient
+{
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setObject:recipient forKey:@"recipient"];
 }
 
 @end

@@ -26,6 +26,16 @@
 		BF323B4212DF287700FEB740 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = BF323B3C12DF287700FEB740 /* Default-Portrait.png */; };
 		BF323B4312DF287700FEB740 /* Default-PortraitUpsideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = BF323B3D12DF287700FEB740 /* Default-PortraitUpsideDown.png */; };
 		BF323B4412DF287700FEB740 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF323B3E12DF287700FEB740 /* Default.png */; };
+		BF323B6F12DF29E200FEB740 /* LICENSE AGREEMENT.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF323B5C12DF29E200FEB740 /* LICENSE AGREEMENT.rtf */; };
+		BF323B7012DF29E200FEB740 /* SCBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B5E12DF29E200FEB740 /* SCBadgeView.m */; };
+		BF323B7112DF29E200FEB740 /* SCClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6012DF29E200FEB740 /* SCClassDefinition.m */; };
+		BF323B7212DF29E200FEB740 /* SCGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6212DF29E200FEB740 /* SCGlobals.m */; };
+		BF323B7312DF29E200FEB740 /* SCPropertyAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6412DF29E200FEB740 /* SCPropertyAttributes.m */; };
+		BF323B7412DF29E200FEB740 /* SCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6612DF29E200FEB740 /* SCTableViewCell.m */; };
+		BF323B7512DF29E200FEB740 /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6812DF29E200FEB740 /* SCTableViewController.m */; };
+		BF323B7612DF29E200FEB740 /* SCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6A12DF29E200FEB740 /* SCTableViewModel.m */; };
+		BF323B7712DF29E200FEB740 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6C12DF29E200FEB740 /* SCTableViewSection.m */; };
+		BF323B7812DF29E200FEB740 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6E12DF29E200FEB740 /* SCViewController.m */; };
 		BF4F7C0D12D07241007CB6E2 /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */; };
 		BF4F7CC012D0A22E007CB6E2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CBF12D0A22E007CB6E2 /* Icon.png */; };
 		BF4F7CF112D0C53D007CB6E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */; };
@@ -74,6 +84,25 @@
 		BF323B3C12DF287700FEB740 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		BF323B3D12DF287700FEB740 /* Default-PortraitUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-PortraitUpsideDown.png"; sourceTree = "<group>"; };
 		BF323B3E12DF287700FEB740 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BF323B5C12DF29E200FEB740 /* LICENSE AGREEMENT.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "LICENSE AGREEMENT.rtf"; sourceTree = "<group>"; };
+		BF323B5D12DF29E200FEB740 /* SCBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBadgeView.h; sourceTree = "<group>"; };
+		BF323B5E12DF29E200FEB740 /* SCBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBadgeView.m; sourceTree = "<group>"; };
+		BF323B5F12DF29E200FEB740 /* SCClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCClassDefinition.h; sourceTree = "<group>"; };
+		BF323B6012DF29E200FEB740 /* SCClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCClassDefinition.m; sourceTree = "<group>"; };
+		BF323B6112DF29E200FEB740 /* SCGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGlobals.h; sourceTree = "<group>"; };
+		BF323B6212DF29E200FEB740 /* SCGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGlobals.m; sourceTree = "<group>"; };
+		BF323B6312DF29E200FEB740 /* SCPropertyAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPropertyAttributes.h; sourceTree = "<group>"; };
+		BF323B6412DF29E200FEB740 /* SCPropertyAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPropertyAttributes.m; sourceTree = "<group>"; };
+		BF323B6512DF29E200FEB740 /* SCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewCell.h; sourceTree = "<group>"; };
+		BF323B6612DF29E200FEB740 /* SCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewCell.m; sourceTree = "<group>"; };
+		BF323B6712DF29E200FEB740 /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
+		BF323B6812DF29E200FEB740 /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
+		BF323B6912DF29E200FEB740 /* SCTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewModel.h; sourceTree = "<group>"; };
+		BF323B6A12DF29E200FEB740 /* SCTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewModel.m; sourceTree = "<group>"; };
+		BF323B6B12DF29E200FEB740 /* SCTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewSection.h; sourceTree = "<group>"; };
+		BF323B6C12DF29E200FEB740 /* SCTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewSection.m; sourceTree = "<group>"; };
+		BF323B6D12DF29E200FEB740 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		BF323B6E12DF29E200FEB740 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
 		BF4F7C0B12D07241007CB6E2 /* ApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationHelper.h; sourceTree = "<group>"; };
 		BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationHelper.m; sourceTree = "<group>"; };
 		BF4F7CBF12D0A22E007CB6E2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -117,6 +146,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF323B5B12DF29E200FEB740 /* Sensible TableView */,
 				BF323B3412DF280600FEB740 /* FlurryLib */,
 				BFB50BF212D4D37C00D8EBE3 /* Models */,
 				BFB50BF112D4CF1500D8EBE3 /* Controllers */,
@@ -200,6 +230,32 @@
 				BF323B3712DF280600FEB740 /* libFlurry.a */,
 			);
 			path = FlurryLib;
+			sourceTree = "<group>";
+		};
+		BF323B5B12DF29E200FEB740 /* Sensible TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BF323B5C12DF29E200FEB740 /* LICENSE AGREEMENT.rtf */,
+				BF323B5D12DF29E200FEB740 /* SCBadgeView.h */,
+				BF323B5E12DF29E200FEB740 /* SCBadgeView.m */,
+				BF323B5F12DF29E200FEB740 /* SCClassDefinition.h */,
+				BF323B6012DF29E200FEB740 /* SCClassDefinition.m */,
+				BF323B6112DF29E200FEB740 /* SCGlobals.h */,
+				BF323B6212DF29E200FEB740 /* SCGlobals.m */,
+				BF323B6312DF29E200FEB740 /* SCPropertyAttributes.h */,
+				BF323B6412DF29E200FEB740 /* SCPropertyAttributes.m */,
+				BF323B6512DF29E200FEB740 /* SCTableViewCell.h */,
+				BF323B6612DF29E200FEB740 /* SCTableViewCell.m */,
+				BF323B6712DF29E200FEB740 /* SCTableViewController.h */,
+				BF323B6812DF29E200FEB740 /* SCTableViewController.m */,
+				BF323B6912DF29E200FEB740 /* SCTableViewModel.h */,
+				BF323B6A12DF29E200FEB740 /* SCTableViewModel.m */,
+				BF323B6B12DF29E200FEB740 /* SCTableViewSection.h */,
+				BF323B6C12DF29E200FEB740 /* SCTableViewSection.m */,
+				BF323B6D12DF29E200FEB740 /* SCViewController.h */,
+				BF323B6E12DF29E200FEB740 /* SCViewController.m */,
+			);
+			path = "Sensible TableView";
 			sourceTree = "<group>";
 		};
 		BF916AAF12D7237300FE9252 /* Resources-iPad */ = {
@@ -329,6 +385,7 @@
 				BF323B4212DF287700FEB740 /* Default-Portrait.png in Resources */,
 				BF323B4312DF287700FEB740 /* Default-PortraitUpsideDown.png in Resources */,
 				BF323B4412DF287700FEB740 /* Default.png in Resources */,
+				BF323B6F12DF29E200FEB740 /* LICENSE AGREEMENT.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +405,15 @@
 				BF996FB712D477C600916A41 /* SettingsViewController.m in Sources */,
 				BFB50BB412D4C6BF00D8EBE3 /* MailComposerViewController.m in Sources */,
 				BFB50C7012D5308000D8EBE3 /* Idea.m in Sources */,
+				BF323B7012DF29E200FEB740 /* SCBadgeView.m in Sources */,
+				BF323B7112DF29E200FEB740 /* SCClassDefinition.m in Sources */,
+				BF323B7212DF29E200FEB740 /* SCGlobals.m in Sources */,
+				BF323B7312DF29E200FEB740 /* SCPropertyAttributes.m in Sources */,
+				BF323B7412DF29E200FEB740 /* SCTableViewCell.m in Sources */,
+				BF323B7512DF29E200FEB740 /* SCTableViewController.m in Sources */,
+				BF323B7612DF29E200FEB740 /* SCTableViewModel.m in Sources */,
+				BF323B7712DF29E200FEB740 /* SCTableViewSection.m in Sources */,
+				BF323B7812DF29E200FEB740 /* SCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

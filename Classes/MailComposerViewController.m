@@ -12,10 +12,9 @@
 
 @implementation MailComposerViewController
 
-@synthesize rootViewController;
-@synthesize idea;
+@synthesize delegate, recipient, subject, content;
 
--(IBAction)showPicker
+-(void)showPicker
 {
 	// Check if we can send emails. Thanks Apple.
 	Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
@@ -46,18 +45,17 @@
 	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 	picker.mailComposeDelegate = self;
 	
-	[picker setSubject:[idea subject]];
-	
+	[picker setSubject:subject];
 	
 	// Set up recipients
-	NSArray *toRecipients = [NSArray arrayWithObject:[ApplicationHelper recipient]]; 
+	NSArray *toRecipients = [NSArray arrayWithObject:recipient];
 	
 	[picker setToRecipients:toRecipients];
 		
 	// Fill out the email body text
-	[picker setMessageBody:[idea dump] isHTML:NO];
+	[picker setMessageBody:content isHTML:NO];
 	
-	[rootViewController presentModalViewController:picker animated:YES];
+	[delegate presentModalViewController:picker animated:YES];
     [picker release];
 }
 
@@ -65,7 +63,7 @@
 // Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
 {	
-	[rootViewController dismissModalViewControllerAnimated:YES];
+	[delegate dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -75,11 +73,8 @@
 // Launches the Mail application on the device.
 -(void)launchMailAppOnDevice
 {
-	NSString *recipient = [ApplicationHelper recipient];
-	NSString *subject = [idea subject];
-	
 	NSString *recipients = [NSString stringWithFormat:@"mailto:%@?subject=%@", recipient, subject];
-	NSString *body = [NSString stringWithFormat:@"&body=%@", [idea dump]];
+	NSString *body = [NSString stringWithFormat:@"&body=%@", content];
 	
 	NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
 	email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -88,37 +83,13 @@
 }
 
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -135,8 +106,10 @@
 
 
 - (void)dealloc {
-	[rootViewController release];
-	[idea release];
+	[delegate release];
+	[recipient release];
+	[subject release];
+	[content release];
     [super dealloc];
 }
 

@@ -18,7 +18,10 @@
 + (NSDictionary *)themes;
 + (NSDictionary *)theme;
 + (void)saveTheme:(NSString *)themeID;
++ (UIColor *)navigationColor;
 
 + (NSString *)recipient;
++ (void)setRecipient:(NSString *)recipient;
+
 
 @end

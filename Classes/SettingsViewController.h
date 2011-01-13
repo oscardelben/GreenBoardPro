@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RootViewController;
+#import "SCTableViewModel.h"
+@class MailComposerViewController;
 
-@interface SettingsViewController : UITableViewController {
+@interface SettingsViewController : UITableViewController <SCTableViewModelDelegate> {
 	id delegate;
+	
+	SCTableViewModel *tableModel;
+	MailComposerViewController *mailComposerViewController;
 }
 
 @property (nonatomic, retain) id delegate;

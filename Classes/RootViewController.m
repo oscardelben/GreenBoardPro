@@ -22,6 +22,7 @@
 - (void)showMailView;
 - (void)showSettingsView;
 - (void)configureTheme;
+- (void)configureToolbar;
 @end
 
 
@@ -30,7 +31,6 @@
 @synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_;
 
 @synthesize selectedIdea;
-@synthesize mailComposerViewController;
 
 
 #pragma mark -
@@ -44,7 +44,6 @@
 	
 	if (mailComposerViewController == nil) {
 		mailComposerViewController = [[MailComposerViewController alloc] init];
-		mailComposerViewController.rootViewController = self;
 	}
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] 
@@ -56,65 +55,25 @@
 	[addButton release];
 
 	if (!selectedIdea) {
-		UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] 
+		UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] 
 										  initWithTitle:@"Settings"
 										  style:UIBarButtonItemStyleBordered
 										  target:self 
 										  action:@selector(showSettingsView)];
 		
-		self.navigationItem.leftBarButtonItem = optionsButton;
+		self.navigationItem.leftBarButtonItem = settingsButton;
 		
-		[optionsButton release];
+		[settingsButton release];
 	}
 	
 	
 	self.tableView.backgroundColor = [UIColor clearColor]; // Display image under the view
 	
-	// TODO separator color
 	self.tableView.separatorColor = [UIColor colorWithRed:34/255.0 green:76/255.0 blue:72/255.0 alpha:1];
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	
-	// toolbar
-	if (selectedIdea) {
-		self.navigationController.toolbarHidden = NO;
-		
-		UIBarButtonItem *flexibleSPace = [[UIBarButtonItem alloc]
-										  initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace 
-										  target:nil 
-										  action:nil];
-		
-		UIBarButtonItem *editItem = [[UIBarButtonItem alloc] 
-									 initWithImage:[UIImage imageNamed:@"187-pencil.png"]
-									 style:UIBarButtonSystemItemReply
-									 target:self 
-									 action:@selector(editCurrentObject:)];
-		UIBarButtonItem *deleteItem = [[UIBarButtonItem alloc] 
-									 initWithBarButtonSystemItem:UIBarButtonSystemItemTrash 
-									 target:self 
-									 action:@selector(showDeleteConfirmation:)];
-		UIBarButtonItem *mailItem = [[UIBarButtonItem alloc] 
-									   initWithImage:[UIImage imageNamed:@"18-envelope.png"]
-									   style:UIBarButtonSystemItemReply
-									   target:self 
-									   action:@selector(showMailView)];
-		
-		self.toolbarItems = [NSArray arrayWithObjects:
-							 flexibleSPace, 
-							 editItem, 
-							 flexibleSPace, 
-							 mailItem, 
-							 flexibleSPace, 
-							 deleteItem, 
-							 flexibleSPace, 
-							 nil];
-		
-		[flexibleSPace release];
-		[editItem release];
-		[mailItem release];
-		[deleteItem release];
-	} else {
-		self.navigationController.toolbarHidden = YES;
-	}
+	[self configureToolbar];
+	
 
 	[self configureTheme];
 }
@@ -169,14 +128,9 @@
 - (void)configureTheme
 {
 	NSDictionary *theme = [ApplicationHelper theme];
-	
-	int r = [[theme objectForKey:@"red"] intValue];
-	int g = [[theme objectForKey:@"green"] intValue];
-	int b = [[theme objectForKey:@"blue"] intValue];
-	
-    // Override point for customization after application launch.
-	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
-	self.navigationController.toolbar.tintColor = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+
+	self.navigationController.navigationBar.tintColor = [ApplicationHelper navigationColor];
+	self.navigationController.toolbar.tintColor = [ApplicationHelper navigationColor];
 	
 	UIDevice *device = [UIDevice currentDevice];
 	
@@ -254,7 +208,11 @@
 
 - (void)showMailView
 {
-	mailComposerViewController.idea = selectedIdea;
+	mailComposerViewController.delegate = self;
+	mailComposerViewController.recipient = [ApplicationHelper recipient];
+	mailComposerViewController.subject = [selectedIdea subject];
+	mailComposerViewController.content = [selectedIdea dump];
+	
 	[mailComposerViewController showPicker];
 }
 
@@ -269,6 +227,50 @@
 	
 	[settingsViewController release];
 	[navigationController release];
+}
+
+- (void)configureToolbar
+{
+	if (selectedIdea) {
+		self.navigationController.toolbarHidden = NO;
+		
+		UIBarButtonItem *flexibleSPace = [[UIBarButtonItem alloc]
+										  initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace 
+										  target:nil 
+										  action:nil];
+		
+		UIBarButtonItem *editItem = [[UIBarButtonItem alloc] 
+									 initWithImage:[UIImage imageNamed:@"187-pencil.png"]
+									 style:UIBarButtonSystemItemReply
+									 target:self 
+									 action:@selector(editCurrentObject:)];
+		UIBarButtonItem *deleteItem = [[UIBarButtonItem alloc] 
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemTrash 
+									   target:self 
+									   action:@selector(showDeleteConfirmation:)];
+		UIBarButtonItem *mailItem = [[UIBarButtonItem alloc] 
+									 initWithImage:[UIImage imageNamed:@"18-envelope.png"]
+									 style:UIBarButtonSystemItemReply
+									 target:self 
+									 action:@selector(showMailView)];
+		
+		self.toolbarItems = [NSArray arrayWithObjects:
+							 flexibleSPace, 
+							 editItem, 
+							 flexibleSPace, 
+							 mailItem, 
+							 flexibleSPace, 
+							 deleteItem, 
+							 flexibleSPace, 
+							 nil];
+		
+		[flexibleSPace release];
+		[editItem release];
+		[mailItem release];
+		[deleteItem release];
+	} else {
+		self.navigationController.toolbarHidden = YES;
+	}
 }
 
 #pragma mark -
@@ -595,7 +597,6 @@
     [fetchedResultsController_ release];
     [managedObjectContext_ release];
 	[selectedIdea release];
-	[mailComposerViewController release];
     [super dealloc];
 }
 

@@ -13,8 +13,7 @@
 @class MailComposerViewController;
 @class Idea;
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, IdeaDetailDelegate> {
-	
+@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, IdeaDetailDelegate> {	
 	Idea *selectedIdea;
 	MailComposerViewController *mailComposerViewController;
 
@@ -27,7 +26,6 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, retain) Idea *selectedIdea;
-@property (nonatomic, retain) MailComposerViewController *mailComposerViewController;
 
 
 - (void)showDeleteConfirmation:(id)sender;

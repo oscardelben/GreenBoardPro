@@ -10,18 +10,20 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@class RootViewController;
-@class Idea;
-
 @interface MailComposerViewController : UIViewController <MFMailComposeViewControllerDelegate> {
-	RootViewController *rootViewController;
-	Idea *idea;
+	id delegate;
+	
+	NSString *recipient;
+	NSString *subject;
+	NSString *content;
 }
 
-@property (nonatomic, retain) RootViewController *rootViewController;
-@property (nonatomic, retain) Idea *idea;
+@property (nonatomic, retain) id delegate;
+@property (nonatomic, retain) NSString *recipient;
+@property (nonatomic, retain) NSString *subject;
+@property (nonatomic, retain) NSString *content;
 
--(IBAction)showPicker;
+-(void)showPicker;
 -(void)displayComposerSheet;
 -(void)launchMailAppOnDevice;
 
