@@ -22,6 +22,7 @@
 - (void)showMailView;
 - (void)showSettingsView;
 - (void)configureTheme;
+- (void)configureNavigationBar;
 - (void)configureToolbar;
 @end
 
@@ -45,26 +46,6 @@
 	if (mailComposerViewController == nil) {
 		mailComposerViewController = [[MailComposerViewController alloc] init];
 	}
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] 
-								  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
-								  target:self 
-								  action:@selector(insertNewObject)];
-	
-    self.navigationItem.rightBarButtonItem = addButton;
-	[addButton release];
-
-	if (!selectedIdea) {
-		UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] 
-										  initWithTitle:@"Settings"
-										  style:UIBarButtonItemStyleBordered
-										  target:self 
-										  action:@selector(showSettingsView)];
-		
-		self.navigationItem.leftBarButtonItem = settingsButton;
-		
-		[settingsButton release];
-	}
 	
 	
 	self.tableView.backgroundColor = [UIColor clearColor]; // Display image under the view
@@ -72,6 +53,7 @@
 	self.tableView.separatorColor = [UIColor colorWithRed:34/255.0 green:76/255.0 blue:72/255.0 alpha:1];
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	
+	[self configureNavigationBar];
 	[self configureToolbar];
 	
 
@@ -227,6 +209,29 @@
 	
 	[settingsViewController release];
 	[navigationController release];
+}
+
+- (void)configureNavigationBar
+{
+	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] 
+								  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
+								  target:self 
+								  action:@selector(insertNewObject)];
+	
+    self.navigationItem.rightBarButtonItem = addButton;
+	[addButton release];
+	
+	if (!selectedIdea) {
+		UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] 
+										   initWithTitle:@"Settings"
+										   style:UIBarButtonItemStyleBordered
+										   target:self 
+										   action:@selector(showSettingsView)];
+		
+		self.navigationItem.leftBarButtonItem = settingsButton;
+		
+		[settingsButton release];
+	}
 }
 
 - (void)configureToolbar
