@@ -36,6 +36,7 @@
 		BF323B7612DF29E200FEB740 /* SCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6A12DF29E200FEB740 /* SCTableViewModel.m */; };
 		BF323B7712DF29E200FEB740 /* SCTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6C12DF29E200FEB740 /* SCTableViewSection.m */; };
 		BF323B7812DF29E200FEB740 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323B6E12DF29E200FEB740 /* SCViewController.m */; };
+		BF323D3F12DF6A5800FEB740 /* RootViewController+FetchedController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF323D3E12DF6A5800FEB740 /* RootViewController+FetchedController.m */; };
 		BF4F7C0D12D07241007CB6E2 /* ApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */; };
 		BF4F7CC012D0A22E007CB6E2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CBF12D0A22E007CB6E2 /* Icon.png */; };
 		BF4F7CF112D0C53D007CB6E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4F7CF012D0C53D007CB6E2 /* iTunesArtwork.png */; };
@@ -103,6 +104,8 @@
 		BF323B6C12DF29E200FEB740 /* SCTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewSection.m; sourceTree = "<group>"; };
 		BF323B6D12DF29E200FEB740 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
 		BF323B6E12DF29E200FEB740 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		BF323D3D12DF6A5800FEB740 /* RootViewController+FetchedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootViewController+FetchedController.h"; sourceTree = "<group>"; };
+		BF323D3E12DF6A5800FEB740 /* RootViewController+FetchedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootViewController+FetchedController.m"; sourceTree = "<group>"; };
 		BF4F7C0B12D07241007CB6E2 /* ApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationHelper.h; sourceTree = "<group>"; };
 		BF4F7C0C12D07241007CB6E2 /* ApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationHelper.m; sourceTree = "<group>"; };
 		BF4F7CBF12D0A22E007CB6E2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				BF996FB512D477C600916A41 /* SettingsViewController.m */,
 				BFB50BB212D4C6BF00D8EBE3 /* MailComposerViewController.h */,
 				BFB50BB312D4C6BF00D8EBE3 /* MailComposerViewController.m */,
+				BF323D3D12DF6A5800FEB740 /* RootViewController+FetchedController.h */,
+				BF323D3E12DF6A5800FEB740 /* RootViewController+FetchedController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				BF323B7612DF29E200FEB740 /* SCTableViewModel.m in Sources */,
 				BF323B7712DF29E200FEB740 /* SCTableViewSection.m in Sources */,
 				BF323B7812DF29E200FEB740 /* SCViewController.m in Sources */,
+				BF323D3F12DF6A5800FEB740 /* RootViewController+FetchedController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
