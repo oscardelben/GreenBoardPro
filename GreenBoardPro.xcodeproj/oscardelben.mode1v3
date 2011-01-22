@@ -284,7 +284,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 32}, {242, 664}}</string>
+							<string>{{0, 0}, {242, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BFB2113812E480D300EA8D90</string>
+										<string>BF5333A612EAD28B00A3D1E0</string>
 										<key>history</key>
 										<array>
 											<string>BF4F7CFF12D0C8AA007CB6E2</string>
@@ -359,12 +359,11 @@
 											<string>BF506B4912E46D900093A1EA</string>
 											<string>BF506B4A12E46D900093A1EA</string>
 											<string>BF506B4B12E46D900093A1EA</string>
-											<string>BFB2110712E4708700EA8D90</string>
 											<string>BFB2110912E4708700EA8D90</string>
 											<string>BFB2110A12E4708700EA8D90</string>
 											<string>BFB2110B12E4708700EA8D90</string>
 											<string>BFB2113212E47F3700EA8D90</string>
-											<string>BFB2113312E47F3700EA8D90</string>
+											<string>BFB2113812E480D300EA8D90</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -376,14 +375,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1012, 469}}</string>
+								<string>{{0, 0}, {1012, 463}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>469pt</string>
+							<string>463pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -396,14 +395,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 474}, {1012, 208}}</string>
+								<string>{{0, 468}, {1012, 214}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>208pt</string>
+							<string>214pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -422,9 +421,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>BFB2110D12E4708700EA8D90</string>
+				<string>BF53339B12EAD23500A3D1E0</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>BFB2110E12E4708700EA8D90</string>
+				<string>BF53339C12EAD23500A3D1E0</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -588,7 +587,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController+FetchedController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -605,8 +604,6 @@
 							<string>328pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -646,7 +643,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>BF55DF8B12C88FDB00689625</string>
-				<string>BFB210DE12E46E7800EA8D90</string>
+				<string>BF53339D12EAD23500A3D1E0</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -768,13 +765,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>BFB210DF12E46E7800EA8D90</string>
+				<string>BF53339E12EAD23500A3D1E0</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>BFB210E012E46E7800EA8D90</string>
-				<string>BFB210E112E46E7800EA8D90</string>
-				<string>BFB210E212E46E7800EA8D90</string>
-				<string>BFB210E312E46E7800EA8D90</string>
-				<string>BFB210E412E46E7800EA8D90</string>
+				<string>BF53339F12EAD23500A3D1E0</string>
+				<string>BF5333A012EAD23500A3D1E0</string>
+				<string>BF5333A112EAD23500A3D1E0</string>
+				<string>BF5333A212EAD23500A3D1E0</string>
+				<string>BF5333A312EAD23500A3D1E0</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

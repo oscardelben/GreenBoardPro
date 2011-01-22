@@ -87,13 +87,13 @@
 	
 	// Feedback
 	
-	SCTableViewSection *extraSection = [SCTableViewSection sectionWithHeaderTitle:@"Extra"];
-	[tableModel addSection:extraSection];
+	SCTableViewSection *supportSection = [SCTableViewSection sectionWithHeaderTitle:@"Support"];
+	[tableModel addSection:supportSection];
 	
 	SCLabelCell *feedbackCell = [SCLabelCell cellWithText:@"Send feedback"];
 	feedbackCell.label.numberOfLines = 0;
 	feedbackCell.label.lineBreakMode = UILineBreakModeWordWrap;
-	[extraSection addCell:feedbackCell];
+	[supportSection addCell:feedbackCell];
 	
 }
 
